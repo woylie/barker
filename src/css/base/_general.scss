@@ -14,3 +14,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

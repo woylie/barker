@@ -1,0 +1,13 @@
+@use "../functions" as f;
+
+@each $key, $value in f.theme(colors) {
+  #{".color-" + $key} {
+    color: var(#{"--color-" + $key}) !important;
+  }
+}
+
+@each $key, $value in f.theme(colors) {
+  #{".bg-" + $key} {
+    background-color: var(#{"--color-" + $key}) !important;
+  }
+}

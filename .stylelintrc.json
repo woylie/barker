@@ -2,7 +2,7 @@
   "ignoreFiles": ["node_modules"],
   "extends": [
     "stylelint-config-recommended-scss",
-    "stylelint-config-rational-order"
+    "stylelint-config-idiomatic-order"
   ],
   "plugins": ["stylelint-declaration-strict-value"],
   "rules": {

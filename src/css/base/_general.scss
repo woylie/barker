@@ -6,18 +6,18 @@
 
 html,
 body {
-  margin: 0;
   padding: 0;
-  color: f.color(text);
-  font-size: f.base-size();
-  font-family: f.font-family(main);
-  line-height: f.lines(1);
+  margin: 0;
   background: f.color(background);
+  color: f.color(text);
+  font-family: f.font-family(main);
+  font-size: f.base-size();
+  line-height: f.lines(1);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
   * {
-    transition: none !important;
     animation: none !important;
+    transition: none !important;
   }
 }

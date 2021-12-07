@@ -10,7 +10,7 @@
     radius: radii,
     border-width: border-widths,
   );
-  $single-values: (base-size, modular-scale, prose-width, gutter);
+  $single-values: (base-size, measure, modular-scale, gutter);
 
   @each $name, $key in $maps {
     @include map-to-properties($name, map.get($theme, $key));

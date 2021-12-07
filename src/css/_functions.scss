@@ -54,6 +54,10 @@
   @return var(--letter-spacing-#{"" + $id});
 }
 
+@function measure() {
+  @return var(--measure);
+}
+
 @function weight($id) {
   @if not map.has-key(theme(weights), $id) {
     @error "Invalid font weight. Allowed values: #{map.keys(theme(weights))}.";

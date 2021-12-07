@@ -2,7 +2,6 @@
   "name": "tinnef-starter",
   "version": "0.1.0",
   "description": "Starter kit for an SCSS-based design system",
-  "main": "main.js",
   "repository": "https://github.com/woylie/tinnef-starter",
   "author": "Mathias Polligkeit",
   "license": "MIT",
@@ -12,6 +11,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.5.1",
+    "mini-css-extract-plugin": "^2.4.5",
     "sass": "^1.44.0",
     "sass-loader": "^12.3.0",
     "webpack": "^5.65.0",

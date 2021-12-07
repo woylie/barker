@@ -1,0 +1,61 @@
+@use "sass:map";
+@use "sass:math";
+@use "sass:string";
+@use "functions" as f;
+
+$-base-line-height: 1.7411;
+$-line-heights: (0.25, 0.5, 0.75, 1, 1.5, 2);
+$-modular-scale: 1.2;
+
+@function theme(
+  $text: #000000,
+  $primary: #000000,
+  $secondary: #000000,
+  $background: #fff
+) {
+  @return (
+    colors: (
+      text: $text,
+      primary: $primary,
+      secondary: $secondary,
+      background: $background,
+    ),
+    font-families: (
+      main:
+        string.unquote(
+          '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"'
+        ),
+      mono: "monospace",
+    ),
+    base-size: 100%,
+    sizes: f.generate-sizes($-modular-scale, 2, 6),
+    base-line-height: $-base-line-height,
+    line-heights: $-line-heights,
+    lines: f.generate-lines($-base-line-height, $-line-heights),
+    letter-spacings: (
+      normal: normal,
+      wide: 0.1em,
+    ),
+    weights: (
+      normal: normal,
+      bold: bold,
+    ),
+    radii: (
+      s: 4px,
+      m: 8px,
+    ),
+    spacer-base: 0.25rem,
+    border-widths: (
+      small: 1px,
+      medium: 3px,
+      large: 6px,
+    ),
+    gutter: 1.5rem,
+    prose-width: 65ch,
+    breakpoints: (
+      tablet: 769px,
+      desktop: 1024px,
+      widescreen: 1216px,
+    )
+  );
+}

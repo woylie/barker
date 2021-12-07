@@ -6,6 +6,8 @@
 $-base-line-height: 1.7411;
 $-line-heights: (0.25, 0.5, 0.75, 1, 1.5, 2);
 $-modular-scale: 1.2;
+$-smaller-sizes: 2;
+$-larger-sizes: 6;
 
 @function theme(
   $text: #000000,
@@ -28,7 +30,9 @@ $-modular-scale: 1.2;
       mono: "monospace",
     ),
     base-size: 100%,
-    sizes: f.generate-sizes($-modular-scale, 2, 6),
+    smaller-sizes: $-smaller-sizes,
+    larger-sizes: $-larger-sizes,
+    sizes: f.generate-sizes($-modular-scale, $-smaller-sizes, $-larger-sizes),
     base-line-height: $-base-line-height,
     line-heights: $-line-heights,
     lines: f.generate-lines($-base-line-height, $-line-heights),

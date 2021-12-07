@@ -1,0 +1,8 @@
+@use "../mixins" as m;
+@use "base" as b;
+
+$theme: b.theme();
+
+:root {
+  @include m.define-custom-properties($theme);
+}

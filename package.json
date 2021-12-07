@@ -1,0 +1,17 @@
+{
+  "name": "tinnef-starter",
+  "version": "0.1.0",
+  "description": "Starter kit for an SCSS-based design system",
+  "main": "main.js",
+  "repository": "https://github.com/woylie/tinnef-starter",
+  "author": "Mathias Polligkeit",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode development",
+    "watch": "webpack watch --mode development"
+  },
+  "devDependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

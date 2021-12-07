@@ -30,6 +30,7 @@ $-larger-sizes: 6;
       mono: "monospace",
     ),
     base-size: 100%,
+    modular-scale: $-modular-scale,
     smaller-sizes: $-smaller-sizes,
     larger-sizes: $-larger-sizes,
     sizes: f.generate-sizes($-modular-scale, $-smaller-sizes, $-larger-sizes),

@@ -1,0 +1,91 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:math";
+@use "sass:meta";
+@use "themes/base" as b;
+@use "themes/functions" as tf;
+
+@function theme($key) {
+  @return map.get(b.theme(), $key);
+}
+
+@function base-size() {
+  @return var(--base-size);
+}
+
+@function color($id) {
+  @if not map.has-key(theme(colors), $id) {
+    @error "Invalid color. Allowed values: #{map.keys(theme(colors))}.";
+  }
+
+  @return var(--color-#{"" + $id});
+}
+
+@function font-family($id) {
+  @if not map.has-key(theme(font-families), $id) {
+    @error "Invalid font family. Allowed values: #{map.keys(theme(font-families))}.";
+  }
+
+  @return var(--font-family-#{"" + $id});
+}
+
+@function size($id) {
+  @if not map.has-key(theme(sizes), $id) {
+    @error "Invalid size #{$id}. Allowed values: #{map.keys($sizes)}.";
+  }
+
+  @return var(--size-#{"" + $id});
+}
+
+@function lines($factor) {
+  @if not list.index(theme(line-heights), $factor) {
+    @error "Invalid line height #{$lines}. Allowed values: #{theme(line-heights)}.";
+  }
+
+  $key: tf.number_to_fraction($factor);
+  @return var(--lines-#{"" + $key});
+}
+
+@function letter-spacing($id) {
+  @if not map.has-key(theme(letter-spacings), $id) {
+    @error "Invalid letter spacing. Allowed values: #{map.keys(theme(letter-spacings))}.";
+  }
+
+  @return var(--letter-spacing-#{"" + $id});
+}
+
+@function weight($id) {
+  @if not map.has-key(theme(weights), $id) {
+    @error "Invalid font weight. Allowed values: #{map.keys(theme(weights))}.";
+  }
+
+  @return var(--weight-#{"" + $id});
+}
+
+@function radius($id) {
+  @if not map.has-key(theme(radii), $id) {
+    @error "Invalid radius. Allowed values: #{map.keys(theme(radii))}.";
+  }
+
+  @return var(--radius-#{"" + $id});
+}
+
+@function spacer($factor) {
+  @return $factor * theme(spacer-base);
+}
+
+@function border-width($id) {
+  @if not map.has-key(theme(border-widths), $id) {
+    @error "Invalid border-width. Allowed values: #{map.keys(theme(border-widths))}.";
+  }
+
+  @return var(--border-width-#{"" + $id});
+}
+
+@function breakpoint($id) {
+  @if not map.has-key(theme(breakpoints), $id) {
+    @error "Invalid breakpoints. Allowed values: #{map.keys(theme(breakpoints))}.";
+  }
+
+  @return map.get(theme(breakpoints), $id);
+}

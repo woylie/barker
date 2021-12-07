@@ -1,0 +1,28 @@
+{
+  "ignoreFiles": ["node_modules"],
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-rational-order"
+  ],
+  "plugins": ["stylelint-declaration-strict-value"],
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      { "ignorePseudoClasses": ["export"] }
+    ],
+    "scale-unlimited/declaration-strict-value": [
+      [
+        "/color/",
+        "border-radius",
+        "font-size",
+        "font-weight",
+        "letter-spacing",
+        "line-height"
+      ],
+      {
+        "disableFix": true,
+        "ignoreKeywords": ["0", "inherit", "transparent"]
+      }
+    ]
+  }
+}

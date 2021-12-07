@@ -8,11 +8,11 @@ It includes:
 - project layout as described in the articles
 - themes, components, layouts and base styles
 - mixins and functions
-- Webpack
-- SASS
-- Stylelint
-- PostCSS
-- SassDoc
+- webpack
+- dart-sass
+- stylelint
+- postcss
+- sassdoc
 - style guide generation
 
 Work in progress!

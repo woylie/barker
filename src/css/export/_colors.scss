@@ -1,8 +1,0 @@
-@use "sass:map";
-@use "../themes/default" as d;
-
-:export {
-  @each $key, $value in map.get(d.$theme, colors) {
-    #{"" + $key}: $value;
-  }
-}

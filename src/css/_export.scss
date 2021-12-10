@@ -1,0 +1,6 @@
+@use "themes/default" as d;
+@use "mixins" as m;
+
+:export {
+  @include m.values-for-export(d.$theme);
+}

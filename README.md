@@ -16,3 +16,10 @@ It includes:
 - style guide generation
 
 Work in progress!
+
+## Commands
+
+- dev build: `yarn run build`
+- watch mode: `yarn run watch`
+- stylelint: `yarn run stylelint`
+- fix stylelint errors: `yarn run stylelint --fix`

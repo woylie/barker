@@ -12,7 +12,6 @@ It includes:
 - dart-sass
 - stylelint
 - postcss
-- sassdoc
 - style guide generation
 
 Work in progress!

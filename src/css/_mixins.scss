@@ -28,6 +28,34 @@
   @include map-to-properties(size, $sizes);
 }
 
+@mixin values-for-export($theme) {
+  $maps: (
+    color: colors,
+    font-family: font-families,
+    lines: lines,
+    letter-spacing: letter-spacings,
+    weight: weights,
+    radius: radii,
+    border-width: border-widths,
+    breakpoint: breakpoints,
+  );
+  $single-values: (base-size, measure, modular-scale, gutter, spacer-base);
+  $sizes: generate-sizes(
+    map.get($theme, smaller-sizes),
+    map.get($theme, larger-sizes)
+  );
+
+  @each $name, $key in $maps {
+    @each $key, $value in map.get($theme, colors) {
+      #{"" + $name}-#{"" + $key}: #{$value};
+    }
+  }
+
+  @each $key, $value in $sizes {
+    #{"size-" + $key}: #{$value};
+  }
+}
+
 @function generate-sizes($smaller-sizes, $larger-sizes) {
   $sizes: ();
 

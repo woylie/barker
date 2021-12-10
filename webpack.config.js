@@ -4,9 +4,11 @@ const StylelintPlugin = require("stylelint-webpack-plugin");
 const { ESBuildMinifyPlugin } = require("esbuild-loader");
 
 module.exports = {
-  entry: "./src/js/main.js",
+  entry: {
+    main: "./src/js/main.js",
+    styleguide: "./src/js/styleguide.js"
+  },
   output: {
-    filename: "main.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },

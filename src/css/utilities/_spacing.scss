@@ -1,0 +1,48 @@
+@use "../functions" as f;
+
+@each $key, $value in f.theme(lines) {
+  #{".pt-l-" + $key} {
+    padding-top: var(#{"--lines-" + $key}) !important;
+  }
+
+  #{".pb-l-" + $key} {
+    padding-bottom: var(#{"--lines-" + $key}) !important;
+  }
+
+  #{".py-l-" + $key} {
+    padding-top: var(#{"--lines-" + $key}) !important;
+    padding-bottom: var(#{"--lines-" + $key}) !important;
+  }
+
+  #{".mb-l-" + $key} {
+    margin-bottom: var(#{"--lines-" + $key}) !important;
+  }
+}
+
+@each $key, $value in f.theme(spacers) {
+  #{".pl-s-" + $key} {
+    padding-left: var(#{"--spacer-" + $key}) !important;
+  }
+
+  #{".pr-s-" + $key} {
+    padding-right: var(#{"--spacer-" + $key}) !important;
+  }
+
+  #{".px-s-" + $key} {
+    padding-right: var(#{"--spacer-" + $key}) !important;
+    padding-left: var(#{"--spacer-" + $key}) !important;
+  }
+
+  #{".ml-s-" + $key} {
+    margin-left: var(#{"--spacer-" + $key}) !important;
+  }
+
+  #{".mr-s-" + $key} {
+    margin-right: var(#{"--spacer-" + $key}) !important;
+  }
+
+  #{".mx-s-" + $key} {
+    margin-right: var(#{"--spacer-" + $key}) !important;
+    margin-left: var(#{"--spacer-" + $key}) !important;
+  }
+}

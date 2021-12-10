@@ -1,0 +1,13 @@
+@use "../functions" as f;
+
+@each $key, $value in f.theme(sizes) {
+  #{".size-" + $key} {
+    font-size: var(#{"--size-" + $key}) !important;
+  }
+}
+
+@each $key, $value in f.theme(weights) {
+  #{".weight-" + $key} {
+    font-weight: var(#{"--weight-" + $key}) !important;
+  }
+}

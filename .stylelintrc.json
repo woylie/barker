@@ -14,10 +14,13 @@
       [
         "/color/",
         "border-radius",
+        "font-family",
         "font-size",
         "font-weight",
         "letter-spacing",
-        "line-height"
+        "line-height",
+        "border-radius",
+        "border-size"
       ],
       {
         "disableFix": true,

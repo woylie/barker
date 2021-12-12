@@ -31,7 +31,7 @@
 
 @function size($id) {
   @if not map.has-key(theme(sizes), $id) {
-    @error "Invalid size #{$id}. Allowed values: #{map.keys($sizes)}.";
+    @error "Invalid size #{$id}. Allowed values: #{theme($sizes)}.";
   }
 
   @return var(--size-#{"" + $id});

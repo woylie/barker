@@ -1,6 +1,8 @@
 /**
  * Aligns two child elements side by side, if there is enough space. Remaining
  * space is evenly distributed among the children.
+ *
+ * See also layouts/with-sidebar.
  */
 
 @use "../functions" as f;

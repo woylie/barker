@@ -50,6 +50,13 @@ $-larger-sizes: 6;
       m: 8px,
     ),
     spacer-base: 0.25rem,
+    spacer-factors: (
+      1,
+      2,
+      4,
+      6,
+      8,
+    ),
     border-widths: (
       small: 1px,
       medium: 3px,

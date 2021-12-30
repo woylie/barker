@@ -19,7 +19,7 @@
   }
 }
 
-@each $key, $value in f.theme(spacers) {
+@each $key, $value in f.theme(spacer-factors) {
   #{".pl-s-" + $key} {
     padding-left: var(#{"--spacer-" + $key}) !important;
   }

@@ -25,7 +25,13 @@
     map.get($theme, larger-sizes)
   );
 
+  $spacers: generate-spacers(
+    map.get($theme, spacer-base),
+    map.get($theme, spacer-factors)
+  );
+
   @include map-to-properties(size, $sizes);
+  @include map-to-properties(spacer, $spacers);
 }
 
 @mixin values-for-export($theme) {
@@ -108,6 +114,16 @@
   }
 
   @return $sizes;
+}
+
+@function generate-spacers($base, $factors) {
+  $spacers: ();
+
+  @each $factor in $factors {
+    $spacers: map.set($spacers, $factor, $factor * $base);
+  }
+
+  @return $spacers;
 }
 
 @mixin map-to-properties($name, $map) {

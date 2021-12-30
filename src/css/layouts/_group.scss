@@ -19,4 +19,12 @@
 
     overflow-x: auto;
   }
+
+  /*
+  For modifier classes, override the --gap property:
+
+      &.is-small {
+        --gap: f.spacer(1);
+      }
+  */
 }

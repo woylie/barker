@@ -1,0 +1,22 @@
+/**
+ * Groups any kind of child elements in one or multiple rows. Applies a gap
+ * between the elements. Can be set to scroll horizontally instead of wrapping
+ * into multiple rows.
+ */
+
+@use "../functions" as f;
+
+.group {
+  --gap: #{f.lines(0.5)} #{f.spacer(2)};
+  --wrap: wrap;
+
+  display: flex;
+  flex-wrap: var(--wrap);
+  gap: var(--gap);
+
+  .is-scrollable {
+    --wrap: no-wrap;
+
+    overflow-x: auto;
+  }
+}

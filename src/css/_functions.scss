@@ -1,3 +1,13 @@
+/**
+ * This module defines all the functions, including the accessor functions for
+ * the theme variables.
+ *
+ * While you define all variables in the theme modules and custom properties are
+ * defined based on those variables, you should use the accessor functions in
+ * this module to reference the value. This ensures that you don't accidentally
+ * use a custom property that wasn't defined.
+ */
+
 @use "sass:list";
 @use "sass:map";
 @use "sass:math";
@@ -5,30 +15,36 @@
 @use "themes/base" as b;
 @use "themes/functions" as tf;
 
-@function theme($key) {
-  @return map.get(b.theme(), $key);
-}
-
+/// Returns the custom property defining the base font size.
 @function base-size() {
   @return var(--base-size);
 }
 
+/// Returns the color with the given ID by referencing a custom property.
+///
+/// @arg {String} $id
 @function color($id) {
   @if not map.has-key(theme(colors), $id) {
-    @error "Invalid color. Allowed values: #{map.keys(theme(colors))}.";
+    @error "Invalid color #{$id}. Allowed values: #{map.keys(theme(colors))}.";
   }
 
   @return var(--color-#{"" + $id});
 }
 
+/// Returns the font family with the given ID by referencing a custom property.
+///
+/// @arg {String} $id
 @function font-family($id) {
   @if not map.has-key(theme(font-families), $id) {
-    @error "Invalid font family. Allowed values: #{map.keys(theme(font-families))}.";
+    @error "Invalid font family #{$id}. Allowed values: #{map.keys(theme(font-families))}.";
   }
 
   @return var(--font-family-#{"" + $id});
 }
 
+/// Returns the font size with the given ID by referencing a custom property.
+///
+/// @arg {String} $id
 @function size($id) {
   @if not map.has-key(theme(sizes), $id) {
     @error "Invalid size #{$id}. Allowed values: #{theme($sizes)}.";
@@ -37,6 +53,10 @@
   @return var(--size-#{"" + $id});
 }
 
+/// Returns the a vertical distance based on the given number of lines.
+/// References a custom property.
+///
+/// @arg {Number} $factor
 @function lines($factor) {
   @if not list.index(theme(line-heights), $factor) {
     @error "Invalid line height #{$lines}. Allowed values: #{theme(line-heights)}.";
@@ -46,50 +66,93 @@
   @return var(--lines-#{"" + $key});
 }
 
+/// Returns the letter spacing value with the given ID by referencing a custom
+/// property.
+///
+/// @arg {String} $id
 @function letter-spacing($id) {
   @if not map.has-key(theme(letter-spacings), $id) {
-    @error "Invalid letter spacing. Allowed values: #{map.keys(theme(letter-spacings))}.";
+    @error "Invalid letter spacing #{$id}. Allowed values: #{map.keys(theme(letter-spacings))}.";
   }
 
   @return var(--letter-spacing-#{"" + $id});
 }
 
+/// Returns the custom property reference defining the measure (max width for
+/// paragraphs).
 @function measure() {
   @return var(--measure);
 }
 
+/// Returns the font weight value with the given ID by referencing a custom
+/// property.
+///
+/// @arg {String} $id
 @function weight($id) {
   @if not map.has-key(theme(weights), $id) {
-    @error "Invalid font weight. Allowed values: #{map.keys(theme(weights))}.";
+    @error "Invalid font weight #{$id}. Allowed values: #{map.keys(theme(weights))}.";
   }
 
   @return var(--weight-#{"" + $id});
 }
 
+/// Returns the border radius value with the given ID by referencing a custom
+/// property.
+///
+/// @arg {String} $id
 @function radius($id) {
   @if not map.has-key(theme(radii), $id) {
-    @error "Invalid radius. Allowed values: #{map.keys(theme(radii))}.";
+    @error "Invalid radius #{$id}. Allowed values: #{map.keys(theme(radii))}.";
   }
 
   @return var(--radius-#{"" + $id});
 }
 
+/// Returns the spacer value based on the given factor. This function does _not_
+/// reference a custom property.
+///
+/// The given factor is not validated. The `spacer-factors` property of the
+/// theme is only used for defining the utility classes for paddings and
+/// margins.
+///
+/// @arg {Number} $factor
 @function spacer($factor) {
   @return $factor * theme(spacer-base);
 }
 
+/// Returns the border width value with the given ID by referencing a custom
+/// property.
+///
+/// @arg {String} $id
 @function border-width($id) {
   @if not map.has-key(theme(border-widths), $id) {
-    @error "Invalid border-width. Allowed values: #{map.keys(theme(border-widths))}.";
+    @error "Invalid border-width #{$id}. Allowed values: #{map.keys(theme(border-widths))}.";
   }
 
   @return var(--border-width-#{"" + $id});
 }
 
+/// Returns the breakpoint value with the given ID by referencing a custom
+/// property.
+///
+/// @arg {String} $id
 @function breakpoint($id) {
   @if not map.has-key(theme(breakpoints), $id) {
-    @error "Invalid breakpoints. Allowed values: #{map.keys(theme(breakpoints))}.";
+    @error "Invalid breakpoint #{$id}. Allowed values: #{map.keys(theme(breakpoints))}.";
   }
 
   @return map.get(theme(breakpoints), $id);
+}
+
+/* Internal functions you won't need in your style modules. */
+
+/// Returns a value from the base theme.
+///
+/// @arg {String} $key
+@function theme($key) {
+  @if not map.has-key(b.theme(), $key) {
+    @error "Invalid theme property #{$key}. Allowed values: #{map.keys(b.theme())}.";
+  }
+
+  @return map.get(b.theme(), $key);
 }

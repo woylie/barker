@@ -1,3 +1,14 @@
+/**
+ * This module adds utility classes for paddings and margins based on the theme
+ * configuration.
+ *
+ * By default, the classes for horizontal margins and paddings are based on
+ * the `spacer-base` and `spacer-factors` properties of the theme, while the
+ * classes for vertical margins and paddings are based on the configured line
+ * heights. Also, utility classes for top margins have been omitted, since
+ * mixing top and bottom margins is error-prone.
+ */
+
 @use "../functions" as f;
 
 @each $key, $value in f.theme(lines) {

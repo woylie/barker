@@ -1,3 +1,8 @@
+/**
+ * This module exports the theme variables, so that they can be used in a
+ * style guide. See src/js/styleguide.js.
+ */
+
 @use "themes/default" as d;
 @use "mixins" as m;
 

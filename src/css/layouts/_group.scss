@@ -2,6 +2,8 @@
  * Groups any kind of child elements in one or multiple rows. Applies a gap
  * between the elements. Can be set to scroll horizontally instead of wrapping
  * into multiple rows.
+ *
+ * This layout can be used to group buttons, tags, or tabs.
  */
 
 @use "../functions" as f;

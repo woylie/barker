@@ -14,7 +14,7 @@
   flex-wrap: var(--wrap);
   gap: var(--gap);
 
-  .is-scrollable {
+  &.is-scrollable {
     --wrap: no-wrap;
 
     overflow-x: auto;

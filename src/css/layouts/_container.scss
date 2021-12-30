@@ -5,7 +5,9 @@
 @use "../functions" as f;
 
 .container {
-  max-width: var(--max-width, f.measure());
+  --max-width: #{f.measure()};
+
+  max-width: var(--max-width);
 
   &.is-centered {
     margin-right: auto;

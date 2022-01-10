@@ -11,7 +11,7 @@
     "stylelint": "stylelint src/css"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.1",
+    "autoprefixer": "^10.4.2",
     "css-loader": "^6.5.1",
     "esbuild-loader": "^2.18.0",
     "mini-css-extract-plugin": "^2.4.6",

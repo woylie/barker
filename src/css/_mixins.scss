@@ -65,8 +65,8 @@
     map.get($theme, larger-sizes)
   );
 
-  @each $name, $key in $maps {
-    @each $key, $value in map.get($theme, colors) {
+  @each $name, $theme-property in $maps {
+    @each $key, $value in map.get($theme, $theme-property) {
       #{"" + $name}-#{"" + $key}: #{$value};
     }
   }

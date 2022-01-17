@@ -14,7 +14,7 @@
     "autoprefixer": "^10.4.2",
     "css-loader": "^6.5.1",
     "esbuild-loader": "^2.18.0",
-    "mini-css-extract-plugin": "^2.5.0",
+    "mini-css-extract-plugin": "^2.5.1",
     "postcss": "^8.4.5",
     "postcss-loader": "^6.2.1",
     "postcss-scss": "^4.0.3",

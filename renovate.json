@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "enabledManagers": ["github-actions", "npm"],
+  "dependencyDashboard": false,
+  "schedule": ["every weekend"],
+  "prConcurrentLimit": 1,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["postcss"],
+      "groupName": "postcss"
+    },
+    {
+      "matchPackagePatterns": ["stylelint"],
+      "groupName": "stylelint"
+    },
+    {
+      "matchPackagePatterns": ["webpack"],
+      "groupName": "webpack"
+    }
+  ]
+}

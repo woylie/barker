@@ -7,6 +7,7 @@ It includes:
 
 - project layout as described in the articles
 - themes, components, layouts and base styles
+- style dictionary
 - mixins and functions
 - webpack
 - dart-sass

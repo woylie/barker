@@ -1,5 +1,12 @@
 const StyleDictionary = require("style-dictionary");
 
+StyleDictionary.registerFilter({
+  name: "noInternals",
+  matcher: function (token) {
+    return token.attributes.category != "internal";
+  },
+});
+
 StyleDictionary.registerFormat({
   name: "scss/mixin",
   formatter: function ({ dictionary, options = {}, file }) {
@@ -23,6 +30,7 @@ const platforms = {
     files: [
       {
         destination: `_mixin.scss`,
+        filter: "noInternals",
         format: "scss/mixin",
       },
       {
@@ -37,6 +45,7 @@ const platforms = {
     files: [
       {
         destination: "tokens.css",
+        filter: "noInternals",
         format: "css/variables",
       },
     ],
@@ -64,7 +73,7 @@ const platforms = {
 };
 
 const base = StyleDictionary.extend({
-  source: ["src/tokens/**/*.json"],
+  source: ["src/tokens/**/*.{json,js}"],
   platforms: platforms,
 });
 

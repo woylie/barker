@@ -6,7 +6,7 @@ const { ESBuildMinifyPlugin } = require("esbuild-loader");
 module.exports = {
   entry: {
     main: "./src/js/main.js",
-    styleguide: "./src/js/styleguide.js"
+    styleguide: "./src/js/styleguide.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),

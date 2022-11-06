@@ -9,7 +9,7 @@ module.exports = {
     styleguide: "./src/js/styleguide.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build/css"),
     clean: true,
   },
   plugins: [

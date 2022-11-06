@@ -126,8 +126,8 @@
 ///
 /// @arg {String} $id
 @function border-width($id) {
-  @if not map.has-key(theme(border-widths), $id) {
-    @error "Invalid border-width #{$id}. Allowed values: #{map.keys(theme(border-widths))}.";
+  @if not map.has-key(token(border, width), $id) {
+    @error "Invalid border-width #{$id}. Allowed values: #{map.keys(token(border, width))}.";
   }
 
   @return var(--border-width-#{"" + $id});
@@ -158,10 +158,10 @@
   @return map.get(b.theme(), $key);
 }
 
-@function token($key) {
-  @if not map.has-key(t.$tokens, $key) {
-    @error "Invalid token #{$key}. Allowed values: #{map.keys(t.$tokens)}.";
+@function token($key, $keys...) {
+  @if not map.has-key(t.$tokens, $key, $keys...) {
+    @error "Invalid token #{$key}.";
   }
 
-  @return map.get(t.$tokens, $key);
+  @return map.get(t.$tokens, $key, $keys...);
 }

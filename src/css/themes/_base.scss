@@ -39,11 +39,6 @@ $-larger-sizes: 6;
       8,
     ),
     gutter: 1.5rem,
-    measure: 65ch,
-    breakpoints: (
-      tablet: 769px,
-      desktop: 1024px,
-      widescreen: 1216px,
-    )
+    measure: 65ch
   );
 }

@@ -133,16 +133,15 @@
   @return var(--border-width-#{"" + $id});
 }
 
-/// Returns the breakpoint value with the given ID by referencing a custom
-/// property.
+/// Returns the breakpoint value with the given ID.
 ///
 /// @arg {String} $id
 @function breakpoint($id) {
-  @if not map.has-key(theme(breakpoints), $id) {
-    @error "Invalid breakpoint #{$id}. Allowed values: #{map.keys(theme(breakpoints))}.";
+  @if not map.has-key(token(breakpoint), $id) {
+    @error "Invalid breakpoint #{$id}. Allowed values: #{map.keys(token(breakpoint))}.";
   }
 
-  @return map.get(theme(breakpoints), $id);
+  @return map.get(token(breakpoint), $id);
 }
 
 /* Internal functions you won't need in your style modules. */

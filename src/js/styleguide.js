@@ -1,1 +1,1 @@
-import values from "../../build/tokens/json/tokens.json";
+import values from "../../build/tokens/json/tokens.default.json";

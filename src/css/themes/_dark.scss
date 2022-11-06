@@ -1,4 +1,4 @@
-@use "../../../build/tokens/scss/mixin" as tm;
+@use "../../../build/tokens/scss/mixin.dark" as tm;
 
 .theme-dark {
   @include tm.tokens;

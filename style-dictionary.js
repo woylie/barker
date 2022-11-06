@@ -1,5 +1,15 @@
 const StyleDictionary = require("style-dictionary");
 
+/*
+Set themes here. The SCSS code uses the default theme to define the accessor
+functions. Token files for a specific theme should be named `*.{theme}.json` or
+`*.{theme}.js`. Files without the theme in the name are included in all themes.
+
+When you add a theme, you will also need to add a theme file to `src/css/themes`
+and use it in `src/css/themes/_index.scss`.
+*/
+const themes = ["default", "dark"];
+
 const isInternal = (token) => {
   return token.attributes.category == "internal";
 };
@@ -40,63 +50,72 @@ StyleDictionary.registerFormat({
   },
 });
 
-const platforms = {
-  scss: {
-    transformGroup: "scss",
-    buildPath: "build/tokens/scss/",
-    files: [
-      {
-        destination: `_mixin.scss`,
-        filter: (token) => {
-          return !isBaseColor(token) && !isInternal(token);
+const platforms = (theme = "") => {
+  if (theme != "") {
+    theme = "." + theme;
+  }
+
+  return {
+    scss: {
+      transformGroup: "scss",
+      buildPath: "build/tokens/scss/",
+      files: [
+        {
+          destination: `_mixin${theme}.scss`,
+          filter: (token) => {
+            return !isBaseColor(token) && !isInternal(token);
+          },
+          format: "scss/mixin",
         },
-        format: "scss/mixin",
-      },
-      {
-        destination: "tokens.scss",
-        filter: "noBaseColors",
-        format: "scss/map-deep",
-      },
-    ],
-  },
-  css: {
-    transformGroup: "css",
-    buildPath: "build/tokens/css/",
-    files: [
-      {
-        destination: "tokens.css",
-        filter: (token) => {
-          return !isBaseColor(token) && !isInternal(token);
+        {
+          destination: `tokens${theme}.scss`,
+          filter: "noBaseColors",
+          format: "scss/map-deep",
         },
-        format: "css/variables",
-      },
-    ],
-  },
-  js: {
-    transformGroup: "js",
-    buildPath: "build/tokens/js/",
-    files: [
-      {
-        destination: "tokens.js",
-        format: "javascript/es6",
-      },
-    ],
-  },
-  json: {
-    transformGroup: "js",
-    buildPath: "build/tokens/json/",
-    files: [
-      {
-        destination: "tokens.json",
-        format: "json",
-      },
-    ],
-  },
+      ],
+    },
+    css: {
+      transformGroup: "css",
+      buildPath: "build/tokens/css/",
+      files: [
+        {
+          destination: `tokens${theme}.css`,
+          filter: (token) => {
+            return !isBaseColor(token) && !isInternal(token);
+          },
+          format: "css/variables",
+        },
+      ],
+    },
+    js: {
+      transformGroup: "js",
+      buildPath: "build/tokens/js/",
+      files: [
+        {
+          destination: `tokens${theme}.js`,
+          format: "javascript/es6",
+        },
+      ],
+    },
+    json: {
+      transformGroup: "js",
+      buildPath: "build/tokens/json/",
+      files: [
+        {
+          destination: `tokens${theme}.json`,
+          format: "json",
+        },
+      ],
+    },
+  };
 };
 
-const base = StyleDictionary.extend({
-  source: ["src/tokens/**/*.{json,js}"],
-  platforms: platforms,
-});
+for (const theme of themes) {
+  const themeConfig = StyleDictionary.extend({
+    include: [`src/tokens/**/!(*.${themes.join(`|*.`)}).{json,js}`],
+    source: [`src/tokens/**/*.${theme}.{json,js}`],
+    platforms: platforms(theme),
+  });
 
-base.buildAllPlatforms();
+  themeConfig.buildAllPlatforms();
+}

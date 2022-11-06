@@ -37,10 +37,6 @@ $-larger-sizes: 6;
     base-line-height: $-base-line-height,
     line-heights: $-line-heights,
     lines: f.generate-lines($-base-line-height, $-line-heights),
-    letter-spacings: (
-      normal: normal,
-      wide: 0.1em,
-    ),
     spacer-base: 0.25rem,
     spacer-factors: (
       1,

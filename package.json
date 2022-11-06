@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "run build-tokens && webpack --mode development",
-    "build-tokens": "style-dictionary build --config style-dictionary.json",
+    "build-tokens": "node style-dictionary.js",
     "watch": "run build-tokens && webpack watch --mode development",
     "stylelint": "stylelint src/css"
   },

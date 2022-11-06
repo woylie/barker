@@ -21,7 +21,6 @@
     lines: lines,
     letter-spacing: letter-spacings,
     weight: weights,
-    radius: radii,
     border-width: border-widths,
   );
   $single-values: (base-size, measure, modular-scale, gutter);
@@ -55,7 +54,6 @@
     lines: lines,
     letter-spacing: letter-spacings,
     weight: weights,
-    radius: radii,
     border-width: border-widths,
     breakpoint: breakpoints,
   );

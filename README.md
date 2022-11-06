@@ -15,11 +15,14 @@ It includes:
 - postcss
 - style guide generation
 
-Work in progress!
+It doesn't have all the features I'd like it to have yet, but you can certainly
+use it to get started with a project. Just clone the repository.
 
 ## Commands
 
-- dev build: `yarn run build`
-- watch mode: `yarn run watch`
-- stylelint: `yarn run stylelint`
-- fix stylelint errors: `yarn run stylelint --fix`
+- dev build (tokens + : `yarn build`
+- build style dictionary tokens: `yarn build-tokens`
+- watch mode (does not watch style dictionary tokens): `yarn watch`
+- stylelint: `yarn stylelint`
+- fix stylelint errors: `yarn stylelint --fix`
+- format with prettier: `yarn prettier . --write`

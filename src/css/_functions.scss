@@ -13,6 +13,7 @@
 @use "sass:map";
 @use "sass:math";
 @use "sass:meta";
+@use "sass:string";
 @use "themes/base" as b;
 @use "themes/functions" as tf;
 
@@ -59,12 +60,14 @@
 ///
 /// @arg {Number} $factor
 @function lines($factor) {
-  @if not list.index(theme(line-heights), $factor) {
-    @error "Invalid line height #{$lines}. Allowed values: #{theme(line-heights)}.";
+  $factor: to-string($factor);
+
+  @if not map.has-key(token(size, line), $factor) {
+    @error "Invalid line height #{$factor}. Allowed values: #{map.keys(token(size, line))}.";
   }
 
-  $key: tf.number_to_fraction($factor);
-  @return var(--lines-#{"" + $key});
+  $key: decimal-to-string($factor);
+  @return var(--size-line-#{"" + $key});
 }
 
 /// Returns the letter spacing value with the given ID by referencing a custom
@@ -170,9 +173,40 @@
 }
 
 @function token($key, $keys...) {
+  $key: to-string($key);
+
   @if not map.has-key(t.$tokens, $key, $keys...) {
     @error "Invalid token #{$key}.";
   }
 
   @return map.get(t.$tokens, $key, $keys...);
+}
+
+@function to-string($value) {
+  @if type-of($value) == "string" {
+    @return $value;
+  } @else {
+    @return #{$value};
+  }
+}
+
+@function decimal-to-string($value) {
+  @return replace("#{$value}", ".", "-");
+}
+
+@function replace($string, $pattern, $replacement) {
+  $index: string.index($string, $pattern);
+
+  @if $index {
+    $beginning: string.slice($string, 1, $index - 1);
+    $end: replace(
+      string.slice($string, $index + string.length($pattern)),
+      $pattern,
+      $replacement
+    );
+
+    @return $beginning + $replacement + $end;
+  } @else {
+    @return $string;
+  }
 }

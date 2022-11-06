@@ -72,8 +72,8 @@
 ///
 /// @arg {String} $id
 @function letter-spacing($id) {
-  @if not map.has-key(theme(letter-spacings), $id) {
-    @error "Invalid letter spacing #{$id}. Allowed values: #{map.keys(theme(letter-spacings))}.";
+  @if not map.has-key(token(letter-spacing), $id) {
+    @error "Invalid letter spacing #{$id}. Allowed values: #{map.keys(token(letter-spacing))}.";
   }
 
   @return var(--letter-spacing-#{"" + $id});

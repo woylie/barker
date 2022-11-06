@@ -1,9 +1,26 @@
 const StyleDictionary = require("style-dictionary");
 
+const isInternal = (token) => {
+  return token.attributes.category == "internal";
+};
+
+const isBaseColor = (token) => {
+  return (
+    token.attributes.category === "color" && token.attributes.type === "base"
+  );
+};
+
+StyleDictionary.registerFilter({
+  name: "noBaseColors",
+  matcher: (token) => {
+    return !isBaseColor(token);
+  },
+});
+
 StyleDictionary.registerFilter({
   name: "noInternals",
-  matcher: function (token) {
-    return token.attributes.category != "internal";
+  matcher: (token) => {
+    return !isInternal(token);
   },
 });
 
@@ -30,11 +47,14 @@ const platforms = {
     files: [
       {
         destination: `_mixin.scss`,
-        filter: "noInternals",
+        filter: (token) => {
+          return !isBaseColor(token) && !isInternal(token);
+        },
         format: "scss/mixin",
       },
       {
         destination: "tokens.scss",
+        filter: "noBaseColors",
         format: "scss/map-deep",
       },
     ],
@@ -45,7 +65,9 @@ const platforms = {
     files: [
       {
         destination: "tokens.css",
-        filter: "noInternals",
+        filter: (token) => {
+          return !isBaseColor(token) && !isInternal(token);
+        },
         format: "css/variables",
       },
     ],

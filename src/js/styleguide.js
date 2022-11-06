@@ -1,1 +1,1 @@
-import values from "../css/_export.scss";
+import values from "../../build/tokens/json/tokens.json";

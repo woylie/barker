@@ -5,14 +5,24 @@
 
 @use "../functions" as f;
 
-@each $key, $value in f.theme(colors) {
-  #{".color-" + $key} {
-    color: var(#{"--color-" + $key}) !important;
+@mixin colors($value, $acc: "") {
+  @if type-of($value) == map {
+    @if $acc != "" {
+      $acc: $acc + "-";
+    }
+
+    @each $key, $value in $value {
+      @include colors($value, $acc: $acc + $key);
+    }
+  } @else {
+    #{".color-" + $acc} {
+      color: var(#{"--color-" + $acc}) !important;
+    }
+
+    #{".bg-" + $acc} {
+      background-color: var(#{"--color-" + $acc}) !important;
+    }
   }
 }
 
-@each $key, $value in f.theme(colors) {
-  #{".bg-" + $key} {
-    background-color: var(#{"--color-" + $key}) !important;
-  }
-}
+@include colors(f.token(color));

@@ -14,7 +14,6 @@
 @use "sass:math";
 @use "sass:meta";
 @use "sass:string";
-@use "themes/base" as b;
 
 @function base-size() {
   @return 100%;
@@ -23,12 +22,14 @@
 /// Returns the color with the given ID by referencing a custom property.
 ///
 /// @arg {String} $id
-@function color($id) {
-  @if not map.has-key(theme(colors), $id) {
-    @error "Invalid color #{$id}. Allowed values: #{map.keys(theme(colors))}.";
+/// @arg {List} $ids
+@function color($id, $ids...) {
+  @if not map.has-key(token(color), $id, $ids...) {
+    @error "Invalid color.";
   }
 
-  @return var(--color-#{"" + $id});
+  $list: list.join(($id), $ids);
+  @return var(--color-#{join-with-dashes($list)});
 }
 
 /// Returns the font family with the given ID by referencing a custom property.
@@ -159,17 +160,6 @@
 
 /* Internal functions you won't need in your style modules. */
 
-/// Returns a value from the base theme.
-///
-/// @arg {String} $key
-@function theme($key) {
-  @if not map.has-key(b.theme(), $key) {
-    @error "Invalid theme property #{$key}. Allowed values: #{map.keys(b.theme())}.";
-  }
-
-  @return map.get(b.theme(), $key);
-}
-
 @function token($key, $keys...) {
   $key: to-string($key);
 
@@ -207,4 +197,17 @@
   } @else {
     @return $string;
   }
+}
+
+@function join-with-dashes($list) {
+  $result: list.nth($list, 1);
+
+  @if length($list) > 1 {
+    @for $i from 2 through length($list) {
+      $item: list.nth($list, $i);
+      $result: "#{$result}-#{$item}";
+    }
+  }
+
+  @return $result;
 }

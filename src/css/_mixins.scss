@@ -18,97 +18,21 @@
   $maps: (
     color: colors,
   );
-  $single-values: (base-size, modular-scale);
 
   @each $name, $key in $maps {
     @include map-to-properties($name, map.get($theme, $key));
   }
-
-  @each $name in $single-values {
-    --#{"" + $name}: #{map.get($theme, $name)};
-  }
-
-  $sizes: generate-sizes(
-    map.get($theme, smaller-sizes),
-    map.get($theme, larger-sizes)
-  );
-
-  @include map-to-properties(size, $sizes);
 }
 
 @mixin values-for-export($theme) {
   $maps: (
     color: colors,
   );
-  $single-values: (base-size, modular-scale);
-  $sizes: generate-sizes(
-    map.get($theme, smaller-sizes),
-    map.get($theme, larger-sizes)
-  );
-
   @each $name, $theme-property in $maps {
     @each $key, $value in map.get($theme, $theme-property) {
       #{"" + $name}-#{"" + $key}: #{$value};
     }
   }
-
-  @each $key, $value in $sizes {
-    #{"size-" + $key}: #{$value};
-  }
-}
-
-@function generate-sizes($smaller-sizes, $larger-sizes) {
-  $sizes: ();
-
-  @for $i from $smaller-sizes through 1 {
-    $value: calc(var());
-    $name: null;
-
-    @if $i == 1 {
-      $name: "s";
-      $value: calc(var(--size-m) / var(--modular-scale));
-    } @else {
-      $base-size: "s";
-
-      @if $i > 2 {
-        @for $j from $i - 1 through 2 {
-          $base-size: "x#{$base-size}";
-        }
-      }
-
-      $name: "x#{$base-size}";
-      $value: calc(var(--size-#{$base-size}) / var(--modular-scale));
-    }
-
-    $sizes: map.set($sizes, $name, $value);
-  }
-
-  $sizes: map.set($sizes, "m", 1rem);
-
-  @for $i from 1 through $larger-sizes {
-    $value: calc(var());
-    $name: null;
-
-    @if $i == 1 {
-      $name: "l";
-      $value: calc(var(--size-m) * var(--modular-scale));
-    } @else {
-      $base-size: "l";
-
-      @if $i > 2 {
-        @for $j from 2 through $i - 1 {
-          $base-size: "x#{$base-size}";
-        }
-      }
-
-      $name: "x#{$base-size}";
-      $value: calc(var(--size-#{$base-size}) * var(--modular-scale));
-    }
-
-    $sizes: map.set($sizes, $name, $value);
-  }
-
-  @return $sizes;
 }
 
 @mixin map-to-properties($name, $map) {

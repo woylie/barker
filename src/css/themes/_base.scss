@@ -1,11 +1,6 @@
 @use "sass:map";
 @use "sass:math";
 @use "sass:string";
-@use "functions" as f;
-
-$-modular-scale: 1.2;
-$-smaller-sizes: 2;
-$-larger-sizes: 6;
 
 @function theme(
   $text: #000000,
@@ -19,11 +14,6 @@ $-larger-sizes: 6;
       primary: $primary,
       secondary: $secondary,
       background: $background,
-    ),
-    base-size: 100%,
-    modular-scale: $-modular-scale,
-    smaller-sizes: $-smaller-sizes,
-    larger-sizes: $-larger-sizes,
-    sizes: f.generate-sizes($-modular-scale, $-smaller-sizes, $-larger-sizes)
+    )
   );
 }

@@ -15,11 +15,9 @@
 @use "sass:meta";
 @use "sass:string";
 @use "themes/base" as b;
-@use "themes/functions" as tf;
 
-/// Returns the custom property defining the base font size.
 @function base-size() {
-  @return var(--base-size);
+  @return 100%;
 }
 
 /// Returns the color with the given ID by referencing a custom property.
@@ -48,11 +46,11 @@
 ///
 /// @arg {String} $id
 @function size($id) {
-  @if not map.has-key(theme(sizes), $id) {
-    @error "Invalid size #{$id}. Allowed values: #{theme($sizes)}.";
+  @if not map.has-key(token(size, font), $id) {
+    @error "Invalid size #{$id}. Allowed values: #{map.keys(token(size, font))}.";
   }
 
-  @return var(--size-#{"" + $id});
+  @return var(--size-font-#{"" + $id});
 }
 
 /// Returns the a vertical distance based on the given number of lines.

@@ -5,9 +5,9 @@
 
 @use "../functions" as f;
 
-@each $key, $value in f.theme(sizes) {
+@each $key, $value in f.token(size, font) {
   #{".size-" + $key} {
-    font-size: var(#{"--size-" + $key}) !important;
+    font-size: var(#{"--size-font-" + $key}) !important;
   }
 }
 

@@ -29,14 +29,6 @@ $-larger-sizes: 6;
     sizes: f.generate-sizes($-modular-scale, $-smaller-sizes, $-larger-sizes),
     base-line-height: $-base-line-height,
     line-heights: $-line-heights,
-    lines: f.generate-lines($-base-line-height, $-line-heights),
-    spacer-base: 0.25rem,
-    spacer-factors: (
-      1,
-      2,
-      4,
-      6,
-      8,
-    )
+    lines: f.generate-lines($-base-line-height, $-line-heights)
   );
 }

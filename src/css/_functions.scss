@@ -90,8 +90,8 @@
 ///
 /// @arg {String} $id
 @function weight($id) {
-  @if not map.has-key(theme(weights), $id) {
-    @error "Invalid font weight #{$id}. Allowed values: #{map.keys(theme(weights))}.";
+  @if not map.has-key(token(weight), $id) {
+    @error "Invalid font weight #{$id}. Allowed values: #{map.keys(token(weight))}.";
   }
 
   @return var(--weight-#{"" + $id});

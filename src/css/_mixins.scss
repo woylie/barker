@@ -20,7 +20,6 @@
     font-family: font-families,
     lines: lines,
     letter-spacing: letter-spacings,
-    weight: weights,
     border-width: border-widths,
   );
   $single-values: (base-size, measure, modular-scale, gutter);
@@ -53,7 +52,6 @@
     font-family: font-families,
     lines: lines,
     letter-spacing: letter-spacings,
-    weight: weights,
     border-width: border-widths,
     breakpoint: breakpoints,
   );

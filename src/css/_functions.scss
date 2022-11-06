@@ -8,6 +8,7 @@
  * use a custom property that wasn't defined.
  */
 
+@use "../../build/tokens/scss/tokens.scss" as t;
 @use "sass:list";
 @use "sass:map";
 @use "sass:math";
@@ -101,8 +102,8 @@
 ///
 /// @arg {String} $id
 @function radius($id) {
-  @if not map.has-key(theme(radii), $id) {
-    @error "Invalid radius #{$id}. Allowed values: #{map.keys(theme(radii))}.";
+  @if not map.has-key(token(radius), $id) {
+    @error "Invalid radius #{$id}. Allowed values: #{map.keys(token(radius))}.";
   }
 
   @return var(--radius-#{"" + $id});
@@ -155,4 +156,12 @@
   }
 
   @return map.get(b.theme(), $key);
+}
+
+@function token($key) {
+  @if not map.has-key(t.$tokens, $key) {
+    @error "Invalid token #{$key}. Allowed values: #{map.keys(t.$tokens)}.";
+  }
+
+  @return map.get(t.$tokens, $key);
 }

@@ -1,8 +1,10 @@
+@use "../../../build/tokens/scss/mixin" as tm;
 @use "../mixins" as m;
 @use "base" as b;
 
 $theme: b.theme();
 
 :root {
+  @include tm.tokens;
   @include m.define-custom-properties($theme);
 }

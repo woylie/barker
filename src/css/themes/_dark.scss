@@ -1,14 +1,5 @@
-@use "../mixins" as m;
 @use "../../../build/tokens/scss/mixin" as tm;
-@use "base" as b;
-
-$theme: b.theme(
-  $text: #fff,
-  $primary: #fff,
-  $secondary: #fff,
-  $background: #000000,
-);
 
 .theme-dark {
-  @include m.define-custom-properties($theme);
+  @include tm.tokens;
 }

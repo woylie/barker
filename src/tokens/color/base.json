@@ -1,3 +1,8 @@
 {
-  "color": {}
+  "color": {
+    "base": {
+      "black": { "value": "#000000" },
+      "white": { "value": "#ffffff" }
+    }
+  }
 }

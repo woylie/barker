@@ -11,32 +11,3 @@
  */
 
 @use "sass:map";
-
-/* Tinnef mixins that you won't need in your styles. */
-
-@mixin define-custom-properties($theme) {
-  $maps: (
-    color: colors,
-  );
-
-  @each $name, $key in $maps {
-    @include map-to-properties($name, map.get($theme, $key));
-  }
-}
-
-@mixin values-for-export($theme) {
-  $maps: (
-    color: colors,
-  );
-  @each $name, $theme-property in $maps {
-    @each $key, $value in map.get($theme, $theme-property) {
-      #{"" + $name}-#{"" + $key}: #{$value};
-    }
-  }
-}
-
-@mixin map-to-properties($name, $map) {
-  @each $key, $value in $map {
-    --#{"" + $name}-#{"" + $key}: #{$value};
-  }
-}

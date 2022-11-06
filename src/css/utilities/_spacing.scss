@@ -13,22 +13,25 @@
 
 $spacer: f.token(size, spacer);
 
-@each $key, $value in f.theme(lines) {
-  #{".pt-l-" + $key} {
-    padding-top: var(#{"--lines-" + $key}) !important;
+@each $key, $value in f.token(size, line) {
+  $key-string: f.decimal-to-string($key);
+  $line-value: var(#{"--size-line-" + $key-string});
+
+  #{".pt-l-" + $key-string} {
+    padding-top: $line-value !important;
   }
 
-  #{".pb-l-" + $key} {
-    padding-bottom: var(#{"--lines-" + $key}) !important;
+  #{".pb-l-" + $key-string} {
+    padding-bottom: $line-value !important;
   }
 
-  #{".py-l-" + $key} {
-    padding-top: var(#{"--lines-" + $key}) !important;
-    padding-bottom: var(#{"--lines-" + $key}) !important;
+  #{".py-l-" + $key-string} {
+    padding-top: $line-value !important;
+    padding-bottom: $line-value !important;
   }
 
-  #{".mb-l-" + $key} {
-    margin-bottom: var(#{"--lines-" + $key}) !important;
+  #{".mb-l-" + $key-string} {
+    margin-bottom: $line-value !important;
   }
 }
 

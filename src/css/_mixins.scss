@@ -17,7 +17,6 @@
 @mixin define-custom-properties($theme) {
   $maps: (
     color: colors,
-    font-family: font-families,
     lines: lines,
   );
   $single-values: (base-size, measure, modular-scale, gutter);
@@ -47,7 +46,6 @@
 @mixin values-for-export($theme) {
   $maps: (
     color: colors,
-    font-family: font-families,
     lines: lines,
     breakpoint: breakpoints,
   );

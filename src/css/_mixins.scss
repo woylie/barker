@@ -19,7 +19,6 @@
     color: colors,
     font-family: font-families,
     lines: lines,
-    border-width: border-widths,
   );
   $single-values: (base-size, measure, modular-scale, gutter);
 
@@ -50,7 +49,6 @@
     color: colors,
     font-family: font-families,
     lines: lines,
-    border-width: border-widths,
     breakpoint: breakpoints,
   );
   $single-values: (base-size, measure, modular-scale, gutter, spacer-base);

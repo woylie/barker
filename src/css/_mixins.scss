@@ -19,7 +19,7 @@
     color: colors,
     lines: lines,
   );
-  $single-values: (base-size, measure, modular-scale, gutter);
+  $single-values: (base-size, modular-scale);
 
   @each $name, $key in $maps {
     @include map-to-properties($name, map.get($theme, $key));
@@ -48,7 +48,7 @@
     color: colors,
     lines: lines,
   );
-  $single-values: (base-size, measure, modular-scale, gutter, spacer-base);
+  $single-values: (base-size, modular-scale, spacer-base);
   $sizes: generate-sizes(
     map.get($theme, smaller-sizes),
     map.get($theme, larger-sizes)

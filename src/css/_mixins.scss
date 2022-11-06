@@ -47,7 +47,6 @@
   $maps: (
     color: colors,
     lines: lines,
-    breakpoint: breakpoints,
   );
   $single-values: (base-size, measure, modular-scale, gutter, spacer-base);
   $sizes: generate-sizes(

@@ -36,8 +36,8 @@
 ///
 /// @arg {String} $id
 @function font-family($id) {
-  @if not map.has-key(theme(font-families), $id) {
-    @error "Invalid font family #{$id}. Allowed values: #{map.keys(theme(font-families))}.";
+  @if not map.has-key(token(font, family), $id) {
+    @error "Invalid font family #{$id}. Allowed values: #{map.keys(token(font, family))}.";
   }
 
   @return var(--font-family-#{"" + $id});

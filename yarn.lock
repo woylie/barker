@@ -2903,6 +2903,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-sorting@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "postcss-sorting@npm:8.0.1"
+  peerDependencies:
+    postcss: ^8.4.20
+  checksum: 044d1dcbe04458a3d0fbd90854d408afae3fb90474d3b70021828f7b6fc0820133ad6b8d194268847e2afee50524686b70dee930ed19039469ff828283331af1
+  languageName: node
+  linkType: hard
+
 "postcss-value-parser@npm:^3.3.0":
   version: 3.3.1
   resolution: "postcss-value-parser@npm:3.3.1"
@@ -2925,6 +2934,17 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 9349fd99849b2e3d2e134ff949b7770ecb12375f352723ce2bcc06167eba3850ea7844c1b191a85cd915d6a396b4e8ee9a5267e6cc5d8d003d0cbc7a97555d39
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.20":
+  version: 8.4.21
+  resolution: "postcss@npm:8.4.21"
+  dependencies:
+    nanoid: ^3.3.4
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: e39ac60ccd1542d4f9d93d894048aac0d686b3bb38e927d8386005718e6793dbbb46930f0a523fe382f1bbd843c6d980aaea791252bf5e176180e5a4336d9679
   languageName: node
   linkType: hard
 
@@ -3601,6 +3621,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"stylelint-order@npm:^6.0.0":
+  version: 6.0.1
+  resolution: "stylelint-order@npm:6.0.1"
+  dependencies:
+    postcss: ^8.4.20
+    postcss-sorting: ^8.0.1
+  peerDependencies:
+    stylelint: ^14.0.0
+  checksum: f1f5d5e2ea97b426bba1becdbe06776afb12bbb47738c92b470a9f22f4ed5c920f42f8121eadedd27e493313f005273db5386320e7889dbd6d704169ee620c7d
+  languageName: node
+  linkType: hard
+
 "stylelint-scss@npm:^4.0.0":
   version: 4.0.1
   resolution: "stylelint-scss@npm:4.0.1"
@@ -3820,7 +3852,7 @@ __metadata:
     stylelint-config-idiomatic-order: ^9.0.0
     stylelint-config-standard-scss: ^6.1.0
     stylelint-declaration-strict-value: ^1.9.1
-    stylelint-order: ^5.0.0
+    stylelint-order: ^6.0.0
     stylelint-webpack-plugin: ^3.3.0
     webpack: ^5.75.0
     webpack-cli: ^5.0.0

@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const StylelintPlugin = require("stylelint-webpack-plugin");
-const { ESBuildMinifyPlugin } = require("esbuild-loader");
+const { EsbuildPlugin } = require("esbuild-loader");
 
 module.exports = {
   entry: {
@@ -18,7 +18,7 @@ module.exports = {
   ],
   optimization: {
     minimizer: [
-      new ESBuildMinifyPlugin({
+      new EsbuildPlugin({
         target: "es2015",
         css: true,
       }),

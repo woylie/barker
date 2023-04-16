@@ -3666,8 +3666,8 @@ __metadata:
   linkType: hard
 
 "style-dictionary@npm:^3.7.1":
-  version: 3.7.1
-  resolution: "style-dictionary@npm:3.7.1"
+  version: 3.7.2
+  resolution: "style-dictionary@npm:3.7.2"
   dependencies:
     chalk: ^4.0.0
     change-case: ^4.1.2
@@ -3680,7 +3680,7 @@ __metadata:
     tinycolor2: ^1.4.1
   bin:
     style-dictionary: bin/style-dictionary
-  checksum: f2793b51d4c91625d1ee3385a2438c3fb0723183812c47f0fcea96703fc3a8a433ba4b496a3ab3d793c9827229d74483b4d8916d624d7d9bde5d36e8b18831fe
+  checksum: eaa78247304a8ddf2f8771deabe72b91ba59392bc3e5071ea7f286d4ae7e294e785d7b13e592dea7debcc3cd2f38dbda937ef191cdbb79056550c4982b496aa5
   languageName: node
   linkType: hard
 

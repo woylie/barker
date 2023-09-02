@@ -1480,9 +1480,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-loader@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "esbuild-loader@npm:4.0.1"
+"esbuild-loader@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "esbuild-loader@npm:4.0.2"
   dependencies:
     esbuild: ^0.19.0
     get-tsconfig: ^4.7.0
@@ -1490,7 +1490,7 @@ __metadata:
     webpack-sources: ^1.4.3
   peerDependencies:
     webpack: ^4.40.0 || ^5.0.0
-  checksum: f31eddf3f0c4bc6fc8e056ecad12f72dde8554fc711b0765034acd6141a0038e5632decf93111b08eebea61ac9c45bda2ed29614f31d53bf963cdc1c8d6ca885
+  checksum: beecdeb9fd1d88aceaedc3914bf35c239d7771f767b6afca68dbf4c58adde71ab0506704ed6c713329aa5cf0241c1ff6d4834562571b88bb243a8245710933ae
   languageName: node
   linkType: hard
 
@@ -3985,7 +3985,7 @@ __metadata:
   dependencies:
     autoprefixer: ^10.4.15
     css-loader: ^6.8.1
-    esbuild-loader: ^4.0.1
+    esbuild-loader: ^4.0.2
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.28
     postcss-loader: ^7.3.3

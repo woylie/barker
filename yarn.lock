@@ -3056,6 +3056,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-scss@npm:^4.0.8":
+  version: 4.0.8
+  resolution: "postcss-scss@npm:4.0.8"
+  peerDependencies:
+    postcss: ^8.4.29
+  checksum: 7d3fa94faa0b3987e5ee6e9fd0d8d4004ea5e6823ef740d7a1d5331c52c4f9a19584df16b3581561870ed70b9fc27222e098eafb3bb296ac355ad26fd22d16da
+  languageName: node
+  linkType: hard
+
 "postcss-selector-parser@npm:^6.0.13, postcss-selector-parser@npm:^6.0.2, postcss-selector-parser@npm:^6.0.4":
   version: 6.0.13
   resolution: "postcss-selector-parser@npm:6.0.13"
@@ -4000,7 +4009,7 @@ __metadata:
     mini-css-extract-plugin: ^2.7.6
     postcss: ^8.4.29
     postcss-loader: ^7.3.3
-    postcss-scss: ^4.0.7
+    postcss-scss: ^4.0.8
     prettier: ^3.0.3
     sass: ^1.66.1
     sass-loader: ^13.3.2

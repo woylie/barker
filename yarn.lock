@@ -3696,9 +3696,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-dictionary@npm:^3.8.0":
-  version: 3.8.0
-  resolution: "style-dictionary@npm:3.8.0"
+"style-dictionary@npm:^3.9.0":
+  version: 3.9.0
+  resolution: "style-dictionary@npm:3.9.0"
   dependencies:
     chalk: ^4.0.0
     change-case: ^4.1.2
@@ -3711,7 +3711,7 @@ __metadata:
     tinycolor2: ^1.4.1
   bin:
     style-dictionary: bin/style-dictionary
-  checksum: ed2440c2d1bd84593f9f60ffbfbb7c85c9592d125e169ea63e2044fe681191e8c9c156853d82ae606f9adf6aacbaa162e03d5ef85b80be334d76e28a57bfc189
+  checksum: 70ac197c75e0d97dcbfeb52ed5292b43fa83c5716c2d5a3217f65eaf4812181e847b78a3227271baffc2f5e60b9de1a7d582a3d886a575570ee658ccd687e5ce
   languageName: node
   linkType: hard
 
@@ -4037,7 +4037,7 @@ __metadata:
     prettier: ^3.0.3
     sass: ^1.69.4
     sass-loader: ^13.3.2
-    style-dictionary: ^3.8.0
+    style-dictionary: ^3.9.0
     stylelint: ^15.11.0
     stylelint-config-idiomatic-order: ^9.0.0
     stylelint-config-standard-scss: ^11.0.0

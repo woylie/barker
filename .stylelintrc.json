@@ -24,7 +24,7 @@
       ],
       {
         "disableFix": true,
-        "ignoreKeywords": ["0", "inherit", "transparent"]
+        "ignoreKeywords": ["0", "inherit", "transparent", "dark", "light"]
       }
     ]
   }

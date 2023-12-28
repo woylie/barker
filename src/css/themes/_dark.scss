@@ -2,4 +2,6 @@
 
 .theme-dark {
   @include tm.tokens;
+
+  color-scheme: dark;
 }

@@ -2,7 +2,7 @@
   "ignoreFiles": ["node_modules"],
   "extends": [
     "stylelint-config-recommended-scss",
-    "stylelint-config-idiomatic-order"
+    "stylelint-config-recess-order"
   ],
   "plugins": ["stylelint-declaration-strict-value"],
   "rules": {
@@ -24,7 +24,14 @@
       ],
       {
         "disableFix": true,
-        "ignoreKeywords": ["0", "inherit", "transparent", "dark", "light"]
+        "ignoreKeywords": [
+          "0",
+          "1em",
+          "inherit",
+          "transparent",
+          "dark",
+          "light"
+        ]
       }
     ]
   }

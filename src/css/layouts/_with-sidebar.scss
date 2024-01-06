@@ -33,9 +33,9 @@
     }
 
     > :last-child {
-      min-width: var(--content-min-width);
       flex-basis: 0;
       flex-grow: 666;
+      min-width: var(--content-min-width);
     }
   }
 
@@ -46,9 +46,9 @@
     }
 
     > :first-child {
-      min-width: var(--content-min-width);
       flex-basis: 0;
       flex-grow: 666;
+      min-width: var(--content-min-width);
     }
   }
 

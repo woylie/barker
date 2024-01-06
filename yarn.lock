@@ -3590,12 +3590,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-declaration-strict-value@npm:^1.10.3":
-  version: 1.10.3
-  resolution: "stylelint-declaration-strict-value@npm:1.10.3"
+"stylelint-declaration-strict-value@npm:^1.10.4":
+  version: 1.10.4
+  resolution: "stylelint-declaration-strict-value@npm:1.10.4"
   peerDependencies:
     stylelint: ">=7 <=16"
-  checksum: de52df68d44d6a1f4178f34621fb2966b194a5b97171db162cf882c5b12f681dbc426e94c4b8496a982c447629363247158a5ac4fcdd8242eedde3f6ffb23d08
+  checksum: e668038c72a2ee7967e4e93139696f2d8bc2cc9c544d66ecbc105ebd858f5e59fa8ffa8b26da729597bc0774e25796d82d31541194a41a125e881ff30bc4922a
   languageName: node
   linkType: hard
 
@@ -3829,7 +3829,7 @@ __metadata:
     stylelint: ^16.1.0
     stylelint-config-recess-order: ^4.4.0
     stylelint-config-standard-scss: ^13.0.0
-    stylelint-declaration-strict-value: ^1.10.3
+    stylelint-declaration-strict-value: ^1.10.4
     stylelint-order: ^6.0.4
     stylelint-webpack-plugin: ^4.1.1
     webpack: ^5.89.0

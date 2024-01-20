@@ -23,7 +23,7 @@
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",
     "style-dictionary": "^3.9.1",
-    "stylelint": "^16.1.0",
+    "stylelint": "^16.2.0",
     "stylelint-config-recess-order": "^4.4.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-declaration-strict-value": "^1.10.4",

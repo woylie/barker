@@ -14,7 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.17",
     "css-loader": "^6.9.1",
-    "esbuild-loader": "^4.0.2",
+    "esbuild-loader": "^4.0.3",
     "mini-css-extract-plugin": "^2.7.7",
     "postcss": "^8.4.33",
     "postcss-loader": "^8.0.0",

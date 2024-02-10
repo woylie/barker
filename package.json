@@ -16,21 +16,21 @@
     "css-loader": "^6.10.0",
     "esbuild-loader": "^4.0.3",
     "mini-css-extract-plugin": "^2.8.0",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.35",
     "postcss-loader": "^8.1.0",
     "postcss-scss": "^4.0.9",
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "sass": "^1.70.0",
     "sass-loader": "^14.1.0",
     "style-dictionary": "^3.9.2",
     "stylelint": "^16.2.1",
-    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-recess-order": "^4.6.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-declaration-strict-value": "^1.10.4",
     "stylelint-order": "^6.0.4",
     "stylelint-webpack-plugin": "^5.0.0",
-    "webpack": "^5.90.0",
+    "webpack": "^5.90.1",
     "webpack-cli": "^5.1.4"
   },
-  "packageManager": "yarn@3.6.3"
+  "packageManager": "yarn@4.1.0"
 }

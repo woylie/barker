@@ -24,12 +24,15 @@
 /// @arg {String} $id
 /// @arg {List} $ids
 @function color($id, $ids...) {
-  @if not map.has-key(token(color), $id, $ids...) {
-    @error "Invalid color.";
+  $value: map.get(token(color), $id, $ids...);
+  $list: list.join(($id), $ids);
+  $identifier: join-with-dashes($list);
+
+  @if not $value or meta.type-of($value) == "map" {
+    @error "Invalid color: #{$identifier}";
   }
 
-  $list: list.join(($id), $ids);
-  @return var(--color-#{join-with-dashes($list)});
+  @return var(--color-#{$identifier});
 }
 
 /// Returns the font family with the given ID by referencing a custom property.

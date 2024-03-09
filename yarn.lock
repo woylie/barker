@@ -3552,14 +3552,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-recess-order@npm:^4.6.0":
-  version: 4.6.0
-  resolution: "stylelint-config-recess-order@npm:4.6.0"
+"stylelint-config-recess-order@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "stylelint-config-recess-order@npm:5.0.0"
   dependencies:
-    stylelint-order: "npm:6.x"
+    stylelint-order: "npm:^6.0.4"
   peerDependencies:
-    stylelint: ">=15"
-  checksum: 10/64f9de40b78186f85c5208b00e8320325ea08dae3a58c15ab5a352ab564e2dfb79e5be1bb97fa5fefaa80bc49f88779832c8ba5f2cadd5a7e63a423b8eee8696
+    stylelint: ">=16"
+  checksum: 10/73e2e8d3f83fa3dde83aad96fe89a04048413a4c30abe75449d6bee84af67b387fb4928d8578838b42abdc02661dbcc5f4b54238eb675736c8dc0c5b95f858ad
   languageName: node
   linkType: hard
 
@@ -3625,7 +3625,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-order@npm:6.x, stylelint-order@npm:^6.0.4":
+"stylelint-order@npm:^6.0.4":
   version: 6.0.4
   resolution: "stylelint-order@npm:6.0.4"
   dependencies:
@@ -3853,7 +3853,7 @@ __metadata:
     sass-loader: "npm:^14.1.1"
     style-dictionary: "npm:^3.9.2"
     stylelint: "npm:^16.2.1"
-    stylelint-config-recess-order: "npm:^4.6.0"
+    stylelint-config-recess-order: "npm:^5.0.0"
     stylelint-config-standard-scss: "npm:^13.0.0"
     stylelint-declaration-strict-value: "npm:^1.10.4"
     stylelint-order: "npm:^6.0.4"

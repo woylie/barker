@@ -25,7 +25,7 @@
     "style-dictionary": "^3.9.2",
     "stylelint": "^16.3.1",
     "stylelint-config-recess-order": "^5.0.0",
-    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
     "stylelint-declaration-strict-value": "^1.10.4",
     "stylelint-order": "^6.0.4",
     "stylelint-webpack-plugin": "^5.0.0",

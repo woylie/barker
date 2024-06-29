@@ -9,7 +9,7 @@ var lines = factors.reduce(
   {},
 );
 
-module.exports = {
+export default {
   size: {
     line: lines,
   },

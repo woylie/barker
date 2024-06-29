@@ -38,7 +38,7 @@ sizes = addSmallerSizes(sizes, modularScale, smallerSizes);
 sizes = addBaseSize(sizes, modularScale);
 sizes = addLargerSizes(sizes, modularScale, largerSizes);
 
-module.exports = {
+export default {
   size: {
     font: sizes,
   },

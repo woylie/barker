@@ -1,4 +1,5 @@
-const StyleDictionary = require("style-dictionary");
+import StyleDictionary from "style-dictionary";
+import { fileHeader, formattedVariables } from "style-dictionary/utils";
 
 /*
 Set themes here. The SCSS code uses the default theme to define the accessor
@@ -22,25 +23,26 @@ const isBaseColor = (token) => {
 
 StyleDictionary.registerFilter({
   name: "noBaseColors",
-  matcher: (token) => {
+  filter: (token) => {
     return !isBaseColor(token);
   },
 });
 
 StyleDictionary.registerFilter({
   name: "noInternals",
-  matcher: (token) => {
+  filter: (token) => {
     return !isInternal(token);
   },
 });
 
 StyleDictionary.registerFormat({
   name: "scss/mixin",
-  formatter: function ({ dictionary, options = {}, file }) {
+  format: async function ({ dictionary, file, options = {} }) {
     const { outputReferences } = options;
     return (
+      (await fileHeader({ file })) +
       `@mixin tokens {\n` +
-      StyleDictionary.formatHelpers.formattedVariables({
+      formattedVariables({
         format: "css",
         dictionary,
         outputReferences,
@@ -110,12 +112,14 @@ const platforms = (theme = "") => {
   };
 };
 
-for (const theme of themes) {
-  const themeConfig = StyleDictionary.extend({
-    include: [`src/tokens/**/!(*.${themes.join(`|*.`)}).{json,js}`],
-    source: [`src/tokens/**/*.${theme}.{json,js}`],
-    platforms: platforms(theme),
-  });
+await Promise.all(
+  themes.map((theme) => {
+    const sd = new StyleDictionary({
+      include: [`src/tokens/**/!(*.${themes.join(`|*.`)}).{json,js}`],
+      source: [`src/tokens/**/*.${theme}.{json,js}`],
+      platforms: platforms(theme),
+    });
 
-  themeConfig.buildAllPlatforms();
-}
+    return sd.buildAllPlatforms();
+  }),
+);

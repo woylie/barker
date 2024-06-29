@@ -5,6 +5,7 @@
   "repository": "https://github.com/woylie/tinnef-scss-starter-kit",
   "author": "Mathias Polligkeit",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "run build-tokens && webpack --mode development",
     "build-tokens": "node style-dictionary.js",
@@ -22,7 +23,7 @@
     "prettier": "^3.3.2",
     "sass": "^1.77.6",
     "sass-loader": "^14.2.1",
-    "style-dictionary": "^3.9.2",
+    "style-dictionary": "^4.0.0",
     "stylelint": "^16.6.1",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-standard-scss": "^13.1.0",

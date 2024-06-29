@@ -1,19 +1,19 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const path = require("path");
-const StylelintPlugin = require("stylelint-webpack-plugin");
-const { EsbuildPlugin } = require("esbuild-loader");
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import path from "path";
+import StylelintPlugin from "stylelint-webpack-plugin";
+import { EsbuildPlugin } from "esbuild-loader";
 
-module.exports = {
+export default {
   entry: {
     main: "./src/js/main.js",
     styleguide: "./src/js/styleguide.js",
   },
   output: {
-    path: path.resolve(__dirname, "build/css"),
+    path: path.resolve(import.meta.dirname, "build/css"),
     clean: true,
   },
   plugins: [
-    new StylelintPlugin({ context: path.resolve(__dirname, "src/css") }),
+    new StylelintPlugin({ context: path.resolve(import.meta.dirname, "src/css") }),
     new MiniCssExtractPlugin(),
   ],
   optimization: {

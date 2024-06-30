@@ -7,10 +7,15 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "pnpm run build-tokens && webpack --mode development",
-    "build-tokens": "node style-dictionary.js",
-    "watch": "pnpm run build-tokens && webpack watch --mode development",
-    "stylelint": "stylelint src/css"
+    "build:dev": "pnpm run build:tokens && webpack --mode development",
+    "build:dev:watch": "pnpm run build:tokens && webpack watch --mode development",
+    "build:tokens": "node style-dictionary.js",
+    "lint": "pnpm run lint:prettier && pnpm run lint:stylelint",
+    "lint:fix": "pnpm run lint:prettier:fix && pnpm run lint:stylelint:fix",
+    "lint:prettier": "prettier . --check",
+    "lint:prettier:fix": "prettier . --write",
+    "lint:stylelint": "stylelint src/css",
+    "lint:stylelint:fix": "stylelint src/css --fix"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

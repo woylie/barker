@@ -7,8 +7,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build:dev": "pnpm run build:tokens && webpack --mode development",
-    "build:dev:watch": "pnpm run build:tokens && webpack watch --mode development",
+    "build:dev": "pnpm run build:tokens && node build.js --development",
+    "build:dev:watch": "pnpm run build:tokens && node build.js --watch",
+    "build:production": "pnpm run build:tokens && node build.js --production",
     "build:tokens": "node style-dictionary.js",
     "lint": "pnpm run lint:prettier && pnpm run lint:stylelint",
     "lint:fix": "pnpm run lint:prettier:fix && pnpm run lint:stylelint:fix",
@@ -20,22 +21,15 @@
   "devDependencies": {
     "autoprefixer": "^10.4.19",
     "css-loader": "^7.1.2",
-    "esbuild-loader": "^4.2.0",
-    "mini-css-extract-plugin": "^2.9.0",
+    "esbuild": "^0.21.5",
+    "esbuild-sass-plugin": "^3.3.1",
     "postcss": "^8.4.39",
-    "postcss-loader": "^8.1.1",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.3.2",
-    "sass": "^1.77.6",
-    "sass-loader": "^14.2.1",
     "style-dictionary": "^4.0.0",
     "stylelint": "^16.6.1",
     "stylelint-config-recess-order": "^5.0.1",
     "stylelint-config-standard-scss": "^13.1.0",
-    "stylelint-declaration-strict-value": "^1.10.4",
-    "stylelint-order": "^6.0.4",
-    "stylelint-webpack-plugin": "^5.0.1",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4"
+    "stylelint-declaration-strict-value": "^1.10.4"
   }
 }

@@ -175,7 +175,7 @@
 }
 
 @function to-string($value) {
-  @if type-of($value) == "string" {
+  @if meta.type-of($value) == "string" {
     @return $value;
   } @else {
     @return #{$value};
@@ -206,8 +206,8 @@
 @function join-with-dashes($list) {
   $result: list.nth($list, 1);
 
-  @if length($list) > 1 {
-    @for $i from 2 through length($list) {
+  @if list.length($list) > 1 {
+    @for $i from 2 through list.length($list) {
       $item: list.nth($list, $i);
       $result: "#{$result}-#{$item}";
     }

@@ -21,6 +21,59 @@ cd barker
 rm -rf .github .git
 ```
 
+## Folder Structure
+
+    .
+    ├── build                   # Build artefacts (token definitions, CSS, etc.)
+    │   ├── css                 # CSS output
+    │   └── tokens              # Token output
+    │       ├── css             # CSS custom properties
+    │       ├── js              # JavaScript
+    │       ├── css             # JSON definitions
+    │       └── scss            # SCSS mixins and variables
+    ├── src                     # Source files
+    │   ├── css                 # Styles
+    │   ├── js                  # JavaScript
+    │   └── tokens              # Design Tokens
+    └── ...
+
+### Build Folder
+
+The build folder contains the build artefacts.
+
+    .
+    ├── ...
+    ├── build                   # Build artefacts
+    │   ├── css                 # CSS output
+    │   └── tokens              # Token output
+    │       ├── css             # CSS custom properties
+    │       ├── js              # JavaScript
+    │       ├── css             # JSON definitions
+    │       └── scss            # SCSS mixins and variables
+    └── ...
+
+### CSS Folders
+
+    .
+    ├── ...
+    ├── src
+    │   ├── css
+    │   │   ├── _extends.scss           # SCSS placeholders for @extend
+    │   │   ├── _functions.scss         # SCSS functions for using design tokens
+    │   │   ├── _mixins.scss            # SCSS mixins
+    │   │   ├── base                    # Global base layer
+    │   │   │   ├── _animations.scss    # Keyframe animations
+    │   │   │   ├── _general.scss       # Global styles
+    │   │   │   ├── _index.scss         # Entry point for base layer
+    │   │   │   └── _typography.scss    # Global typography styles
+    │   │   ├── components              # Components are styled elements
+    │   │   ├── layouts                 # Layouts arrange components on the page
+    │   │   ├── main.scss               # Entry point
+    │   │   ├── themes                  # Place for light/dark themes etc.
+    │   │   └── utilities               # Utility classes generated from design tokens
+    │   └── ...
+    └── ...
+
 ## Commands
 
 | Description                                         | Command                   |

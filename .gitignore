@@ -1,11 +1,4 @@
 build/
 node_modules/
-sassdoc/
 
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+.pnpm-lock.yaml

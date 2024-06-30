@@ -7,9 +7,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "run build-tokens && webpack --mode development",
+    "build": "pnpm run build-tokens && webpack --mode development",
     "build-tokens": "node style-dictionary.js",
-    "watch": "run build-tokens && webpack watch --mode development",
+    "watch": "pnpm run build-tokens && webpack watch --mode development",
     "stylelint": "stylelint src/css"
   },
   "devDependencies": {
@@ -32,6 +32,5 @@
     "stylelint-webpack-plugin": "^5.0.1",
     "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4"
-  },
-  "packageManager": "yarn@4.3.1"
+  }
 }

@@ -1,15 +1,11 @@
 {
   "ignoreFiles": ["node_modules"],
   "extends": [
-    "stylelint-config-recommended-scss",
+    "stylelint-config-standard-scss",
     "stylelint-config-recess-order"
   ],
   "plugins": ["stylelint-declaration-strict-value"],
   "rules": {
-    "selector-pseudo-class-no-unknown": [
-      true,
-      { "ignorePseudoClasses": ["export"] }
-    ],
     "scale-unlimited/declaration-strict-value": [
       [
         "/color/",

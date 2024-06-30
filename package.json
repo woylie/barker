@@ -1,8 +1,8 @@
 {
-  "name": "tinnef-starter",
+  "name": "barker",
   "version": "0.1.0",
   "description": "Starter kit for an SCSS-based design system",
-  "repository": "https://github.com/woylie/tinnef-scss-starter-kit",
+  "repository": "https://github.com/woylie/barker",
   "author": "Mathias Polligkeit",
   "license": "MIT",
   "type": "module",

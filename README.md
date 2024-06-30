@@ -9,6 +9,7 @@ It includes:
 - SCSS mixins and functions for accessing design tokens.
 - A [Webpack](https://webpack.js.org/) configuration with [Esbuild](https://esbuild.github.io/), [dart-sass](https://sass-lang.com/dart-sass/) and [PostCSS](https://postcss.org/).
 - A [Stylelint](https://stylelint.io/) configuration.
+- [pnpm](https://pnpm.io/) as package manager.
 
 ## Usage
 

@@ -11,7 +11,7 @@ const addSmallerSizes = (sizes, scale, smallerSizes) => {
     let rem = Math.pow(scale, -1 * i);
     let xCount = i - 1;
     let name = "x".repeat(xCount) + "s";
-    sizes[name] = { value: rem };
+    sizes[name] = { $value: rem };
   }
 
   return sizes;
@@ -22,14 +22,14 @@ const addLargerSizes = (sizes, scale, largerSizes) => {
     let rem = Math.pow(scale, -1 * i);
     let xCount = i - 1;
     let name = "x".repeat(xCount) + "l";
-    sizes[name] = { value: rem };
+    sizes[name] = { $value: rem };
   }
 
   return sizes;
 };
 
 const addBaseSize = (sizes, scale) => {
-  sizes["m"] = { value: 1 };
+  sizes["m"] = { $value: 1 };
   return sizes;
 };
 
@@ -40,6 +40,7 @@ sizes = addLargerSizes(sizes, modularScale, largerSizes);
 
 export default {
   size: {
+    $type: "dimension",
     font: sizes,
   },
 };

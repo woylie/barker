@@ -69,6 +69,7 @@
   }
 
   $key: decimal-to-string($factor);
+
   @return var(--size-line-#{"" + $key});
 }
 

@@ -54,13 +54,14 @@ The build folder contains the build artefacts.
 
 ### CSS Folders
 
+The CSS styles are divided into the layers `base`, `components`, `layouts`,
+`themes`, and `utilities`. More details about each layer can be found in the
+corresponding `_index.scss` files.
+
     .
     ├── ...
     ├── src
     │   ├── css
-    │   │   ├── _extends.scss           # SCSS placeholders for @extend
-    │   │   ├── _functions.scss         # SCSS functions for using design tokens
-    │   │   ├── _mixins.scss            # SCSS mixins
     │   │   ├── base                    # Global base layer
     │   │   │   ├── _animations.scss    # Keyframe animations
     │   │   │   ├── _general.scss       # Global styles
@@ -68,9 +69,12 @@ The build folder contains the build artefacts.
     │   │   │   └── _typography.scss    # Global typography styles
     │   │   ├── components              # Components are styled elements
     │   │   ├── layouts                 # Layouts arrange components on the page
-    │   │   ├── main.scss               # Entry point
     │   │   ├── themes                  # Place for light/dark themes etc.
-    │   │   └── utilities               # Utility classes generated from design tokens
+    │   │   ├── utilities               # Utility classes generated from design tokens
+    │   │   ├── _extends.scss           # SCSS placeholders for @extend
+    │   │   ├── _functions.scss         # SCSS functions for using design tokens
+    │   │   ├── _mixins.scss            # SCSS mixins
+    │   │   └── main.scss               # Entry point
     │   └── ...
     └── ...
 

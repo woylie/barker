@@ -44,7 +44,6 @@ StyleDictionary.registerFormat({
       formatting,
       usesDtcg,
     } = options;
-    console.log(options);
     return (
       (await fileHeader({ file })) +
       `@mixin tokens {\n` +

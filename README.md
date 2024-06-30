@@ -7,7 +7,7 @@ It includes:
 - A [Style Dictionary](https://v4.styledictionary.com/) configuration for defining design tokens.
 - A sensible project layout and organized SCSS files for themes, components, layouts, and base styles.
 - SCSS mixins and functions for accessing design tokens.
-- [Esbuild](https://esbuild.github.io/) configuration with [dart-sass](https://sass-lang.com/dart-sass/) and [PostCSS](https://postcss.org/).
+- [Esbuild](https://esbuild.github.io/) configuration with [dart-sass](https://sass-lang.com/dart-sass/), [PostCSS](https://postcss.org/), [autoprefixer](https://github.com/postcss/autoprefixer), and [PurgeCSS](https://purgecss.com/).
 - A [Stylelint](https://stylelint.io/) configuration.
 - [pnpm](https://pnpm.io/) as package manager.
 
@@ -20,7 +20,31 @@ the repository into your project and adapt it to your needs.
 git clone git@github.com:woylie/barker.git
 cd barker
 rm -rf .github .git
+pnpm install
 ```
+
+## Configuration
+
+- `build.js`: Contains the build configuration for Esbuild, as well as the
+  PostCSS configuration and PurgeCSS configuration (disabled by default).
+- `style-dictionary.js`: Contains the configuration for Style Dictionary. You
+  can modify the output formats for the design tokens here. Note that the SCSS
+  files depend on the `scss` output format.
+
+## Commands
+
+| Description                                         | Command                   |
+| --------------------------------------------------- | ------------------------- |
+| Development build (tokens, CSS, JS, etc.)           | `pnpm build:dev`          |
+| Production build (tokens, CSS, JS, etc.)            | `pnpm build:prod`         |
+| Watch mode (does not watch Style Dictionary tokens) | `pnpm build:dev:watch`    |
+| Build Style Dictionary tokens                       | `pnpm build:tokens`       |
+| Run linters                                         | `pnpm lint`               |
+| Fix linter issues                                   | `pnpm lint:fix`           |
+| Run Prettier                                        | `pnpm lint:prettier`      |
+| Fix Prettier issues                                 | `pnpm lint:prettier:fix`  |
+| Run Stylelint                                       | `pnpm lint:stylelint`     |
+| Fix Stylelint issues                                | `pnpm lint:stylelint:fix` |
 
 ## Folder Structure
 
@@ -78,21 +102,6 @@ corresponding `_index.scss` files.
     │   │   └── main.scss               # Entry point
     │   └── ...
     └── ...
-
-## Commands
-
-| Description                                         | Command                   |
-| --------------------------------------------------- | ------------------------- |
-| Development build (tokens, CSS, JS, etc.)           | `pnpm build:dev`          |
-| Production build (tokens, CSS, JS, etc.)            | `pnpm build:prod`         |
-| Watch mode (does not watch Style Dictionary tokens) | `pnpm build:dev:watch`    |
-| Build Style Dictionary tokens                       | `pnpm build:tokens`       |
-| Run linters                                         | `pnpm lint`               |
-| Fix linter issues                                   | `pnpm lint:fix`           |
-| Run Prettier                                        | `pnpm lint:prettier`      |
-| Fix Prettier issues                                 | `pnpm lint:prettier:fix`  |
-| Run Stylelint                                       | `pnpm lint:stylelint`     |
-| Fix Stylelint issues                                | `pnpm lint:stylelint:fix` |
 
 ## Resources
 

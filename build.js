@@ -3,15 +3,28 @@ import * as esbuild from "esbuild";
 import postcss from "postcss";
 import autoprefixer from "autoprefixer";
 import { sassPlugin } from "esbuild-sass-plugin";
+import purgecss from "@fullhuman/postcss-purgecss";
 
 const args = process.argv.slice(2);
 const watch = args.includes("--watch");
 const production = args.includes("--production");
 
+// To enable PurgeCSS, set content folders here and uncomment purgeCssPlugin
+// below.
+const purgeCssPlugin = purgecss({
+  content: ["./**/*.html"],
+});
+
+const postCssPlugins = [
+  autoprefixer,
+  // To enable PurgeCSS, set content folders above and uncomment line below.
+  // purgeCssPlugin
+];
+
 const plugins = [
   sassPlugin({
     async transform(source, resolveDir) {
-      const { css } = await postcss([autoprefixer]).process(source, {
+      const { css } = await postcss(postCssPlugins).process(source, {
         from: undefined,
       });
       return css;

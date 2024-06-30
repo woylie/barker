@@ -82,12 +82,15 @@ corresponding `_index.scss` files.
 
 | Description                                         | Command                   |
 | --------------------------------------------------- | ------------------------- |
-| Development build (tokens, CSS, JS, etc.)           | `yarn build`              |
-| Build Style Dictionary tokens                       | `yarn build-tokens`       |
-| Watch mode (does not watch Style Dictionary tokens) | `yarn watch`              |
-| Stylelint                                           | `yarn stylelint`          |
-| Fix Stylelint issues                                | `yarn stylelint --fix`    |
-| Format with Prettier                                | `yarn prettier . --write` |
+| Development build (tokens, CSS, JS, etc.)           | `pnpm build:dev`          |
+| Build Style Dictionary tokens                       | `pnpm build:tokens`       |
+| Watch mode (does not watch Style Dictionary tokens) | `pnpm build:dev:watch`    |
+| Run linters                                         | `pnpm lint`               |
+| Fix linter issues                                   | `pnpm lint:fix`           |
+| Run Prettier                                        | `pnpm lint:prettier`      |
+| Fix Prettier issues                                 | `pnpm lint:prettier:fix`  |
+| Run Stylelint                                       | `pnpm lint:stylelint`     |
+| Fix Stylelint issues                                | `pnpm lint:stylelint:fix` |
 
 ## Resources
 

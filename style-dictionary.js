@@ -38,7 +38,13 @@ StyleDictionary.registerFilter({
 StyleDictionary.registerFormat({
   name: "scss/mixin",
   format: async function ({ dictionary, file, options = {} }) {
-    const { outputReferences } = options;
+    const {
+      outputReferences,
+      themeable = true,
+      formatting,
+      usesDtcg,
+    } = options;
+    console.log(options);
     return (
       (await fileHeader({ file })) +
       `@mixin tokens {\n` +
@@ -46,6 +52,9 @@ StyleDictionary.registerFormat({
         format: "css",
         dictionary,
         outputReferences,
+        themeable,
+        formatting,
+        usesDtcg,
       }) +
       `\n}\n`
     );

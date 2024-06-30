@@ -13,7 +13,9 @@ export default {
     clean: true,
   },
   plugins: [
-    new StylelintPlugin({ context: path.resolve(import.meta.dirname, "src/css") }),
+    new StylelintPlugin({
+      context: path.resolve(import.meta.dirname, "src/css"),
+    }),
     new MiniCssExtractPlugin(),
   ],
   optimization: {
@@ -32,11 +34,6 @@ export default {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: {
-              modules: {
-                mode: "icss",
-              },
-            },
           },
           {
             loader: "postcss-loader",

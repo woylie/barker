@@ -84,8 +84,9 @@ corresponding `_index.scss` files.
 | Description                                         | Command                   |
 | --------------------------------------------------- | ------------------------- |
 | Development build (tokens, CSS, JS, etc.)           | `pnpm build:dev`          |
-| Build Style Dictionary tokens                       | `pnpm build:tokens`       |
+| Production build (tokens, CSS, JS, etc.)            | `pnpm build:prod`         |
 | Watch mode (does not watch Style Dictionary tokens) | `pnpm build:dev:watch`    |
+| Build Style Dictionary tokens                       | `pnpm build:tokens`       |
 | Run linters                                         | `pnpm lint`               |
 | Fix linter issues                                   | `pnpm lint:fix`           |
 | Run Prettier                                        | `pnpm lint:prettier`      |

@@ -2,6 +2,7 @@ name: CI
 
 env:
   NODE_VERSION: "22"
+  PNPM_VERSION: "9"
 
 on:
   push:
@@ -15,16 +16,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: "yarn"
-      - name: Install
-        run: yarn install --frozen-lockfile
-      - name: Prettier
-        run: yarn prettier . --check
-      - name: Stylelint
-        run: yarn run stylelint
-      - name: build
-        run: yarn build
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm lint
+      - name: Build
+        run: pnpm build:dev

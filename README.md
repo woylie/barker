@@ -87,5 +87,7 @@ The build folder contains the build artefacts.
 
 ## Resources
 
-Barker is based on ideas described in the
-[Design Systems article series](https://www.mathiaspolligkeit.com/tags/design-systems/).
+- The design token structure is based on [Design Tokens Format](https://design-tokens.github.io/community-group/format/) where possible.
+- The structure is inspired by [CubeCSS](https://cube.fyi/), even though it isn't a faithful implementation.
+- Barker is based on ideas described in the
+  [Design Systems article series](https://www.mathiaspolligkeit.com/tags/design-systems/).

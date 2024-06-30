@@ -30,7 +30,7 @@ rm -rf .github .git
     │   └── tokens              # Token output
     │       ├── css             # CSS custom properties
     │       ├── js              # JavaScript
-    │       ├── css             # JSON definitions
+    │       ├── json            # JSON definitions
     │       └── scss            # SCSS mixins and variables
     ├── src                     # Source files
     │   ├── css                 # Styles
@@ -49,7 +49,7 @@ The build folder contains the build artefacts.
     │   └── tokens              # Token output
     │       ├── css             # CSS custom properties
     │       ├── js              # JavaScript
-    │       ├── css             # JSON definitions
+    │       ├── json            # JSON definitions
     │       └── scss            # SCSS mixins and variables
     └── ...
 

@@ -9,7 +9,7 @@
   "scripts": {
     "build:dev": "pnpm run build:tokens && node build.js --development",
     "build:dev:watch": "pnpm run build:tokens && node build.js --watch",
-    "build:production": "pnpm run build:tokens && node build.js --production",
+    "build:prod": "pnpm run build:tokens && node build.js --production",
     "build:tokens": "node style-dictionary.js",
     "lint": "pnpm run lint:prettier && pnpm run lint:stylelint",
     "lint:fix": "pnpm run lint:prettier:fix && pnpm run lint:stylelint:fix",

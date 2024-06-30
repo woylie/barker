@@ -11,7 +11,7 @@ const addSmallerSizes = (sizes, scale, smallerSizes) => {
     let rem = Math.pow(scale, -1 * i);
     let xCount = i - 1;
     let name = "x".repeat(xCount) + "s";
-    sizes[name] = { $value: rem };
+    sizes[name] = { $value: rem.toFixed(3) };
   }
 
   return sizes;
@@ -22,7 +22,7 @@ const addLargerSizes = (sizes, scale, largerSizes) => {
     let rem = Math.pow(scale, -1 * i);
     let xCount = i - 1;
     let name = "x".repeat(xCount) + "l";
-    sizes[name] = { $value: rem };
+    sizes[name] = { $value: rem.toFixed(3) };
   }
 
   return sizes;

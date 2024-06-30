@@ -4,9 +4,10 @@
  */
 
 @use "../functions" as f;
+@use "sass:meta";
 
 @mixin colors($value, $acc: "") {
-  @if type-of($value) == map {
+  @if meta.type-of($value) == map {
     @if $acc != "" {
       $acc: $acc + "-";
     }

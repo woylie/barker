@@ -116,16 +116,6 @@ const platforms = (theme = "") => {
         },
       ],
     },
-    js: {
-      transformGroup: "js",
-      buildPath: "build/tokens/js/",
-      files: [
-        {
-          destination: `tokens${theme}.js`,
-          format: "javascript/es6",
-        },
-      ],
-    },
     json: {
       transformGroup: "js",
       buildPath: "build/tokens/json/",

@@ -6,6 +6,16 @@
  * defined based on those variables, you should use the accessor functions in
  * this module to reference the value. This ensures that you don't accidentally
  * use a custom property that wasn't defined.
+ *
+ * Example:
+ *
+ *    @use "../functions" as f;
+ *
+ *    .my-component {
+ *      color: f.color(text, default);
+ *    }
+ *
+ * Alternatively, use the tokens forwarded by _tokens.scss.
  */
 
 @use "../../build/tokens/scss/tokens.light.scss" as t;

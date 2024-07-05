@@ -11,8 +11,8 @@ body {
   font-family: f.font-family(main);
   font-size: f.base-size();
   line-height: f.lines(1);
-  color: f.color(text);
-  background: f.color(background);
+  color: f.color(text, default);
+  background: f.color(background, foundation);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {

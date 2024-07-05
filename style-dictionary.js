@@ -2,14 +2,14 @@ import StyleDictionary from "style-dictionary";
 import { fileHeader, formattedVariables } from "style-dictionary/utils";
 
 /*
-Set themes here. The SCSS code uses the default theme to define the accessor
+Set themes here. The SCSS code uses the light theme to define the accessor
 functions. Token files for a specific theme should be named `*.{theme}.json` or
 `*.{theme}.js`. Files without the theme in the name are included in all themes.
 
 When you add a theme, you will also need to add a theme file to `src/css/themes`
 and use it in `src/css/themes/_index.scss`.
 */
-const themes = ["default", "dark"];
+const themes = ["light", "dark"];
 
 const isInternal = (token) => {
   return token.attributes.category == "internal";

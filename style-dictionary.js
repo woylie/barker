@@ -72,6 +72,7 @@ StyleDictionary.registerFormat({
   },
 });
 
+// Platforms that are built for each theme.
 const platforms = (theme = "") => {
   if (theme != "") {
     theme = "." + theme;
@@ -88,18 +89,6 @@ const platforms = (theme = "") => {
             return !isBaseColor(token) && !isInternal(token);
           },
           format: "scss/mixin",
-        },
-        {
-          destination: `_properties${theme}.scss`,
-          filter: (token) => {
-            return !isBaseColor(token) && !isInternal(token);
-          },
-          format: "scss/custom-properties",
-        },
-        {
-          destination: `_tokens${theme}.scss`,
-          filter: "noBaseColors",
-          format: "scss/map-deep",
         },
       ],
     },
@@ -129,6 +118,34 @@ const platforms = (theme = "") => {
   };
 };
 
+// Platforms that are only built once for all themes.
+const themeIndependentPlatforms = {
+  scss: {
+    transformGroup: "scss",
+    buildPath: "build/tokens/scss/",
+    files: [
+      {
+        destination: `_variables.scss`,
+        filter: (token) => {
+          return !isBaseColor(token) && !isInternal(token);
+        },
+        format: "scss/custom-properties",
+      },
+      {
+        destination: `_tokens.scss`,
+        filter: "noBaseColors",
+        format: "scss/map-deep",
+        options: {
+          formatting: {
+            header:
+              "/**\n * This output contains a map that is used to retrieve token names. Do not use\n * the tokens defined in this file directly.\n *\n",
+          },
+        },
+      },
+    ],
+  },
+};
+
 await Promise.all(
   themes.map((theme) => {
     const sd = new StyleDictionary({
@@ -140,3 +157,11 @@ await Promise.all(
     return sd.buildAllPlatforms();
   }),
 );
+
+const sd = new StyleDictionary({
+  include: [`src/tokens/**/!(*.${themes.join(`|*.`)}).{json,js}`],
+  source: [`src/tokens/**/*.${themes[0]}.{json,js}`],
+  platforms: themeIndependentPlatforms,
+});
+
+sd.buildAllPlatforms();

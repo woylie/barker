@@ -18,7 +18,7 @@
  * Alternatively, use the tokens forwarded by _tokens.scss.
  */
 
-@use "../../build/tokens/scss/tokens.light.scss" as t;
+@use "../../build/tokens/scss/tokens.scss" as t;
 @use "sass:list";
 @use "sass:map";
 @use "sass:math";

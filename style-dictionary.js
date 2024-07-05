@@ -36,6 +36,18 @@ StyleDictionary.registerFilter({
 });
 
 StyleDictionary.registerFormat({
+  name: "scss/custom-properties",
+  format: async function ({ dictionary, file }) {
+    return (
+      (await fileHeader({ file })) +
+      dictionary.allTokens
+        .map((prop) => `$${prop.name}: --${prop.name};`)
+        .join("\n")
+    );
+  },
+});
+
+StyleDictionary.registerFormat({
   name: "scss/mixin",
   format: async function ({ dictionary, file, options = {} }) {
     const {
@@ -78,7 +90,14 @@ const platforms = (theme = "") => {
           format: "scss/mixin",
         },
         {
-          destination: `tokens${theme}.scss`,
+          destination: `_properties${theme}.scss`,
+          filter: (token) => {
+            return !isBaseColor(token) && !isInternal(token);
+          },
+          format: "scss/custom-properties",
+        },
+        {
+          destination: `_tokens${theme}.scss`,
           filter: "noBaseColors",
           format: "scss/map-deep",
         },

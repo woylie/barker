@@ -8,7 +8,7 @@
  * use a custom property that wasn't defined.
  */
 
-@use "../../build/tokens/scss/tokens.default.scss" as t;
+@use "../../build/tokens/scss/tokens.light.scss" as t;
 @use "sass:list";
 @use "sass:map";
 @use "sass:math";

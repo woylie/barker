@@ -11,6 +11,13 @@ It includes:
 - A [Stylelint](https://stylelint.io/) configuration.
 - [pnpm](https://pnpm.io/) as package manager.
 
+SCSS is used to generate functions and utility classes from the design
+tokens. You can either use a set of accessor functions to reference the design
+tokens or use SCSS variables. Although SCSS functions or variables are used in
+the code, the final output relies on CSS custom properties (variables). This
+ensures that only defined variables are used. Themes are created by assigning
+different values to these CSS custom properties.
+
 ## Usage
 
 This kit cannot be installed and does not include any generators. Instead, clone

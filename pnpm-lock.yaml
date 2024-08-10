@@ -10,10 +10,10 @@ importers:
     devDependencies:
       '@fullhuman/postcss-purgecss':
         specifier: ^6.0.0
-        version: 6.0.0(postcss@8.4.40)
+        version: 6.0.0(postcss@8.4.41)
       autoprefixer:
         specifier: ^10.4.20
-        version: 10.4.20(postcss@8.4.40)
+        version: 10.4.20(postcss@8.4.41)
       css-loader:
         specifier: ^7.1.2
         version: 7.1.2(webpack@5.92.1(esbuild@0.23.0))
@@ -24,11 +24,11 @@ importers:
         specifier: ^3.3.1
         version: 3.3.1(esbuild@0.23.0)(sass-embedded@1.77.5)
       postcss:
-        specifier: ^8.4.40
-        version: 8.4.40
+        specifier: ^8.4.41
+        version: 8.4.41
       postcss-scss:
         specifier: ^4.0.9
-        version: 4.0.9(postcss@8.4.40)
+        version: 4.0.9(postcss@8.4.41)
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -43,7 +43,7 @@ importers:
         version: 5.0.1(stylelint@16.8.1)
       stylelint-config-standard-scss:
         specifier: ^13.1.0
-        version: 13.1.0(postcss@8.4.40)(stylelint@16.8.1)
+        version: 13.1.0(postcss@8.4.41)(stylelint@16.8.1)
       stylelint-declaration-strict-value:
         specifier: ^1.10.6
         version: 1.10.6(stylelint@16.8.1)
@@ -320,8 +320,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.1.0':
-    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
+  '@types/node@22.2.0':
+    resolution: {integrity: sha512-bm6EG6/pCpkxDf/0gDNDdtDILMOHgaQBVOJGdwsqClnxA3xL6jtMv76rLBc006RVMWbmaf0xbmom4Z/5o2nRkQ==}
 
   '@webassemblyjs/ast@1.12.1':
     resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==}
@@ -1223,8 +1223,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.4.40:
-    resolution: {integrity: sha512-YF2kKIUzAofPMpfH6hOi2cGnv/HrUlfucspc7pDyvv7kGdqXrfj8SCl/t8owkEgKEuu8ZcRjSOxFxVLqwChZ2Q==}
+  postcss@8.4.41:
+    resolution: {integrity: sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==}
     engines: {node: ^10 || ^12 || >=14}
 
   prettier@3.3.3:
@@ -1610,8 +1610,8 @@ packages:
       uglify-js:
         optional: true
 
-  terser@5.31.3:
-    resolution: {integrity: sha512-pAfYn3NIZLyZpa83ZKigvj6Rn9c/vd5KfYGX7cN1mnzqgDcxWvrU5ZtAfIKhEXz9nRecw4z3LXkjaq96/qZqAA==}
+  terser@5.31.5:
+    resolution: {integrity: sha512-YPmas0L0rE1UyLL/llTWA0SiDOqIcAQYLeUj7cJYzXHlRTAnMSg9pPe4VJ5PlKvTrPQsdVFuiRiwyeNlYgwh2Q==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -1855,9 +1855,9 @@ snapshots:
   '@esbuild/win32-x64@0.23.0':
     optional: true
 
-  '@fullhuman/postcss-purgecss@6.0.0(postcss@8.4.40)':
+  '@fullhuman/postcss-purgecss@6.0.0(postcss@8.4.41)':
     dependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
       purgecss: 6.0.0
 
   '@isaacs/cliui@8.0.2':
@@ -1946,7 +1946,7 @@ snapshots:
   '@types/json-schema@7.0.15':
     optional: true
 
-  '@types/node@22.1.0':
+  '@types/node@22.2.0':
     dependencies:
       undici-types: 6.13.0
     optional: true
@@ -2115,14 +2115,14 @@ snapshots:
 
   at-least-node@1.0.0: {}
 
-  autoprefixer@10.4.20(postcss@8.4.40):
+  autoprefixer@10.4.20(postcss@8.4.41):
     dependencies:
       browserslist: 4.23.3
       caniuse-lite: 1.0.30001647
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.0.1
-      postcss: 8.4.40
+      postcss: 8.4.41
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -2253,12 +2253,12 @@ snapshots:
 
   css-loader@7.1.2(webpack@5.92.1(esbuild@0.23.0)):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.4.40)
-      postcss: 8.4.40
-      postcss-modules-extract-imports: 3.1.0(postcss@8.4.40)
-      postcss-modules-local-by-default: 4.0.5(postcss@8.4.40)
-      postcss-modules-scope: 3.2.0(postcss@8.4.40)
-      postcss-modules-values: 4.0.0(postcss@8.4.40)
+      icss-utils: 5.1.0(postcss@8.4.41)
+      postcss: 8.4.41
+      postcss-modules-extract-imports: 3.1.0(postcss@8.4.41)
+      postcss-modules-local-by-default: 4.0.5(postcss@8.4.41)
+      postcss-modules-scope: 3.2.0(postcss@8.4.41)
+      postcss-modules-values: 4.0.0(postcss@8.4.41)
       postcss-value-parser: 4.2.0
       semver: 7.6.2
     optionalDependencies:
@@ -2529,9 +2529,9 @@ snapshots:
 
   hyperdyperid@1.2.0: {}
 
-  icss-utils@5.1.0(postcss@8.4.40):
+  icss-utils@5.1.0(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
 
   ieee754@1.2.1: {}
 
@@ -2621,7 +2621,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.1.0
+      '@types/node': 22.2.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
     optional: true
@@ -2823,49 +2823,49 @@ snapshots:
 
   postcss-media-query-parser@0.2.3: {}
 
-  postcss-modules-extract-imports@3.1.0(postcss@8.4.40):
+  postcss-modules-extract-imports@3.1.0(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
 
-  postcss-modules-local-by-default@4.0.5(postcss@8.4.40):
+  postcss-modules-local-by-default@4.0.5(postcss@8.4.41):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.4.40)
-      postcss: 8.4.40
+      icss-utils: 5.1.0(postcss@8.4.41)
+      postcss: 8.4.41
       postcss-selector-parser: 6.1.1
       postcss-value-parser: 4.2.0
 
-  postcss-modules-scope@3.2.0(postcss@8.4.40):
+  postcss-modules-scope@3.2.0(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
       postcss-selector-parser: 6.1.1
 
-  postcss-modules-values@4.0.0(postcss@8.4.40):
+  postcss-modules-values@4.0.0(postcss@8.4.41):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.4.40)
-      postcss: 8.4.40
+      icss-utils: 5.1.0(postcss@8.4.41)
+      postcss: 8.4.41
 
   postcss-resolve-nested-selector@0.1.4: {}
 
-  postcss-safe-parser@7.0.0(postcss@8.4.40):
+  postcss-safe-parser@7.0.0(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
 
-  postcss-scss@4.0.9(postcss@8.4.40):
+  postcss-scss@4.0.9(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
 
   postcss-selector-parser@6.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss-sorting@8.0.2(postcss@8.4.40):
+  postcss-sorting@8.0.2(postcss@8.4.41):
     dependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.4.40:
+  postcss@8.4.41:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.0.1
@@ -2884,7 +2884,7 @@ snapshots:
     dependencies:
       commander: 12.1.0
       glob: 10.4.2
-      postcss: 8.4.40
+      postcss: 8.4.41
       postcss-selector-parser: 6.1.1
 
   qs@6.12.1:
@@ -3123,26 +3123,26 @@ snapshots:
       stylelint: 16.8.1
       stylelint-order: 6.0.4(stylelint@16.8.1)
 
-  stylelint-config-recommended-scss@14.0.0(postcss@8.4.40)(stylelint@16.8.1):
+  stylelint-config-recommended-scss@14.0.0(postcss@8.4.41)(stylelint@16.8.1):
     dependencies:
-      postcss-scss: 4.0.9(postcss@8.4.40)
+      postcss-scss: 4.0.9(postcss@8.4.41)
       stylelint: 16.8.1
       stylelint-config-recommended: 14.0.1(stylelint@16.8.1)
       stylelint-scss: 6.3.2(stylelint@16.8.1)
     optionalDependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
 
   stylelint-config-recommended@14.0.1(stylelint@16.8.1):
     dependencies:
       stylelint: 16.8.1
 
-  stylelint-config-standard-scss@13.1.0(postcss@8.4.40)(stylelint@16.8.1):
+  stylelint-config-standard-scss@13.1.0(postcss@8.4.41)(stylelint@16.8.1):
     dependencies:
       stylelint: 16.8.1
-      stylelint-config-recommended-scss: 14.0.0(postcss@8.4.40)(stylelint@16.8.1)
+      stylelint-config-recommended-scss: 14.0.0(postcss@8.4.41)(stylelint@16.8.1)
       stylelint-config-standard: 36.0.1(stylelint@16.8.1)
     optionalDependencies:
-      postcss: 8.4.40
+      postcss: 8.4.41
 
   stylelint-config-standard@36.0.1(stylelint@16.8.1):
     dependencies:
@@ -3155,8 +3155,8 @@ snapshots:
 
   stylelint-order@6.0.4(stylelint@16.8.1):
     dependencies:
-      postcss: 8.4.40
-      postcss-sorting: 8.0.2(postcss@8.4.40)
+      postcss: 8.4.41
+      postcss-sorting: 8.0.2(postcss@8.4.41)
       stylelint: 16.8.1
 
   stylelint-scss@6.3.2(stylelint@16.8.1):
@@ -3197,9 +3197,9 @@ snapshots:
       micromatch: 4.0.7
       normalize-path: 3.0.0
       picocolors: 1.0.1
-      postcss: 8.4.40
+      postcss: 8.4.41
       postcss-resolve-nested-selector: 0.1.4
-      postcss-safe-parser: 7.0.0(postcss@8.4.40)
+      postcss-safe-parser: 7.0.0(postcss@8.4.41)
       postcss-selector-parser: 6.1.1
       postcss-value-parser: 4.2.0
       resolve-from: 5.0.0
@@ -3251,13 +3251,13 @@ snapshots:
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
-      terser: 5.31.3
+      terser: 5.31.5
       webpack: 5.92.1(esbuild@0.23.0)
     optionalDependencies:
       esbuild: 0.23.0
     optional: true
 
-  terser@5.31.3:
+  terser@5.31.5:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.12.1

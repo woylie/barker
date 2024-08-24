@@ -39,8 +39,8 @@ importers:
         specifier: ^16.8.2
         version: 16.8.2
       stylelint-config-recess-order:
-        specifier: ^5.0.1
-        version: 5.0.1(stylelint@16.8.2)
+        specifier: ^5.1.0
+        version: 5.1.0(stylelint@16.8.2)
       stylelint-config-standard-scss:
         specifier: ^13.1.0
         version: 13.1.0(postcss@8.4.41)(stylelint@16.8.2)
@@ -320,8 +320,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.4.0':
-    resolution: {integrity: sha512-49AbMDwYUz7EXxKU/r7mXOsxwFr4BYbvB7tWYxVuLdb2ibd30ijjXINSMAHiEEZk5PCRBmW1gUeisn2VMKt3cQ==}
+  '@types/node@22.5.0':
+    resolution: {integrity: sha512-DkFrJOe+rfdHTqqMg0bSNlGlQ85hSoh2TPzZyhHsXnMtligRWpxUySiyw8FY14ITt24HVCiQPWxS3KO/QlGmWg==}
 
   '@webassemblyjs/ast@1.12.1':
     resolution: {integrity: sha512-EKfMUOPRRUTy5UII4qJDGPpqfwjOmZ5jeGFwid9mnoqIFK+e0vqoi1qH56JpmZSzEL53jKnNzScdmftJyG5xWg==}
@@ -1504,8 +1504,8 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  stylelint-config-recess-order@5.0.1:
-    resolution: {integrity: sha512-rKbGkoa3h0rINrGln9TFVowvSCLgPJC5O0EuPiqlqWcJMb1lImEtXktcjFCVz+hwtSUiHD3ijJc3vP9muFOgJg==}
+  stylelint-config-recess-order@5.1.0:
+    resolution: {integrity: sha512-ddapCF6B/kEtQYIFhQFReQ0dvK1ZdgJDM/SGFtIyeooYDbqaJqcOlGkRRGaVErCQYJY/bPSPsLRS2LdQtLJUVQ==}
     peerDependencies:
       stylelint: '>=16'
 
@@ -1641,8 +1641,11 @@ packages:
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
-  undici-types@6.19.6:
-    resolution: {integrity: sha512-e/vggGopEfTKSvj4ihnOLTsqhrKRN3LeO6qSN/GxohhuRv8qH9bNQ4B8W7e/vFL+0XTnmHPB4/kegunZGA4Org==}
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
@@ -1946,9 +1949,9 @@ snapshots:
   '@types/json-schema@7.0.15':
     optional: true
 
-  '@types/node@22.4.0':
+  '@types/node@22.5.0':
     dependencies:
-      undici-types: 6.19.6
+      undici-types: 6.19.8
     optional: true
 
   '@webassemblyjs/ast@1.12.1':
@@ -2621,7 +2624,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.4.0
+      '@types/node': 22.5.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
     optional: true
@@ -2926,7 +2929,7 @@ snapshots:
 
   rxjs@7.8.1:
     dependencies:
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   safe-buffer@5.2.1: {}
 
@@ -3118,7 +3121,7 @@ snapshots:
       path-unified: 0.1.0
       tinycolor2: 1.6.0
 
-  stylelint-config-recess-order@5.0.1(stylelint@16.8.2):
+  stylelint-config-recess-order@5.1.0(stylelint@16.8.2):
     dependencies:
       stylelint: 16.8.2
       stylelint-order: 6.0.4(stylelint@16.8.2)
@@ -3285,7 +3288,9 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  undici-types@6.19.6:
+  tslib@2.7.0: {}
+
+  undici-types@6.19.8:
     optional: true
 
   universalify@2.0.1: {}

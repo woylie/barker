@@ -573,8 +573,8 @@ packages:
       typescript:
         optional: true
 
-  cross-spawn@7.0.3:
-    resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
+  cross-spawn@7.0.5:
+    resolution: {integrity: sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==}
     engines: {node: '>= 8'}
 
   css-functions-list@3.2.3:
@@ -2244,7 +2244,7 @@ snapshots:
       js-yaml: 4.1.0
       parse-json: 5.2.0
 
-  cross-spawn@7.0.3:
+  cross-spawn@7.0.5:
     dependencies:
       path-key: 3.1.1
       shebang-command: 2.0.0
@@ -2435,7 +2435,7 @@ snapshots:
 
   foreground-child@3.3.0:
     dependencies:
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.5
       signal-exit: 4.1.0
 
   fraction.js@4.3.7: {}
@@ -2784,7 +2784,7 @@ snapshots:
       '@yarnpkg/lockfile': 1.1.0
       chalk: 4.1.2
       ci-info: 3.9.0
-      cross-spawn: 7.0.3
+      cross-spawn: 7.0.5
       find-yarn-workspace-root: 2.0.0
       fs-extra: 9.1.0
       json-stable-stringify: 1.1.1

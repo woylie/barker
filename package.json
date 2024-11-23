@@ -19,7 +19,7 @@
     "lint:stylelint:fix": "stylelint src/css --fix"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "autoprefixer": "^10.4.20",
     "css-loader": "^7.1.2",
     "esbuild": "^0.24.0",

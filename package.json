@@ -19,18 +19,18 @@
     "lint:stylelint:fix": "stylelint src/css --fix"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "autoprefixer": "^10.4.20",
     "css-loader": "^7.1.2",
     "esbuild": "^0.24.0",
     "esbuild-sass-plugin": "^3.3.1",
     "postcss": "^8.4.49",
     "postcss-scss": "^4.0.9",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "style-dictionary": "^4.2.0",
-    "stylelint": "^16.10.0",
+    "stylelint": "^16.11.0",
     "stylelint-config-recess-order": "^5.1.1",
-    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-declaration-strict-value": "^1.10.6"
   }
 }

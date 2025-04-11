@@ -1,0 +1,45 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "enabled": true,
+  "enabledManagers": [
+    "github-actions",
+    "npm"
+  ],
+  "reviewersFromCodeOwners": true,
+  "schedule": [
+    "every weekend"
+  ],
+  "timezone": "Europe/Copenhagen",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "esbuild",
+      "matchPackageNames": [
+        "/esbuild/"
+      ]
+    },
+    {
+      "groupName": "postcss",
+      "matchPackageNames": [
+        "/postcss/"
+      ]
+    },
+    {
+      "groupName": "stylelint",
+      "matchPackageNames": [
+        "/stylelint/"
+      ]
+    }
+  ]
+}

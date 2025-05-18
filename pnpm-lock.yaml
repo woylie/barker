@@ -43,7 +43,7 @@ importers:
         version: 6.0.0(stylelint@16.19.1)
       stylelint-config-standard-scss:
         specifier: ^15.0.0
-        version: 15.0.0(postcss@8.5.3)(stylelint@16.19.1)
+        version: 15.0.1(postcss@8.5.3)(stylelint@16.19.1)
       stylelint-declaration-strict-value:
         specifier: ^1.10.11
         version: 1.10.11(stylelint@16.19.1)
@@ -58,8 +58,8 @@ packages:
     resolution: {integrity: sha512-D2hP9eA+Sqx1kBZgzxZh0y1trbuU+JoDkiEwqhQ36nodYqJwyEIhPSdMNd7lOm/4io72luTPWH20Yda0xOuUow==}
     engines: {node: '>=6.9.0'}
 
-  '@bufbuild/protobuf@2.3.0':
-    resolution: {integrity: sha512-WK6zH4MtBp/uesX8KGCnwDDRVnEVHUvwjsigKXcSR57Oo8Oyv1vRS9qyUlSP+6KWRl5z8tNAU5qpf3QodeVYxA==}
+  '@bufbuild/protobuf@2.4.0':
+    resolution: {integrity: sha512-RN9M76x7N11QRihKovEglEjjVCQEA9PRBVnDgk9xw8JHLrcUrp4FpAVSPSH91cNbcTft3u2vpLN4GMbiKY9PJw==}
 
   '@bundled-es-modules/deepmerge@4.3.1':
     resolution: {integrity: sha512-Rk453EklPUPC3NRWc3VUNI/SSUjdBaFoaQvFRmNBNtMHVtOFD5AntiWg5kEE1hqcPqedYFDzxE3ZcMYPcA195w==}
@@ -1447,9 +1447,9 @@ packages:
     peerDependencies:
       stylelint: '>=16'
 
-  stylelint-config-recommended-scss@15.0.0:
-    resolution: {integrity: sha512-LCxdFHly0NCJbMsgPpaAPkTf1xclU+SMpTsShlsAv1SLs8KDnaO8OhJGp8XEC8JyOzFHfmVYTXU6V1y8IahfRg==}
-    engines: {node: '>=22'}
+  stylelint-config-recommended-scss@15.0.1:
+    resolution: {integrity: sha512-V24bxkNkFGggqPVJlP9iXaBabwSGEG7QTz+PyxrRtjPkcF+/NsWtB3tKYvFYEmczRkWiIEfuFMhGpJFj9Fxe6Q==}
+    engines: {node: '>=20'}
     peerDependencies:
       postcss: ^8.3.3
       stylelint: ^16.16.0
@@ -1463,9 +1463,9 @@ packages:
     peerDependencies:
       stylelint: ^16.16.0
 
-  stylelint-config-standard-scss@15.0.0:
-    resolution: {integrity: sha512-KPyz0DyncXW+1ppWYcols98sSP6Lnsu8wZRZ+Gr18KmWXD1tRykkQ1QYTpFmcA1RkqrIg/U8J0SInLb04U/57A==}
-    engines: {node: '>=22'}
+  stylelint-config-standard-scss@15.0.1:
+    resolution: {integrity: sha512-8pmmfutrMlPHukLp+Th9asmk21tBXMVGxskZCzkRVWt1d8Z0SrXjUUQ3vn9KcBj1bJRd5msk6yfEFM0UYHBRdg==}
+    engines: {node: '>=20'}
     peerDependencies:
       postcss: ^8.3.3
       stylelint: ^16.18.0
@@ -1627,7 +1627,7 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.27.1': {}
 
-  '@bufbuild/protobuf@2.3.0': {}
+  '@bufbuild/protobuf@2.4.0': {}
 
   '@bundled-es-modules/deepmerge@4.3.1':
     dependencies:
@@ -2745,7 +2745,7 @@ snapshots:
 
   sass-embedded@1.88.0:
     dependencies:
-      '@bufbuild/protobuf': 2.3.0
+      '@bufbuild/protobuf': 2.4.0
       buffer-builder: 0.2.0
       colorjs.io: 0.5.2
       immutable: 5.1.2
@@ -2891,7 +2891,7 @@ snapshots:
       stylelint: 16.19.1
       stylelint-order: 6.0.4(stylelint@16.19.1)
 
-  stylelint-config-recommended-scss@15.0.0(postcss@8.5.3)(stylelint@16.19.1):
+  stylelint-config-recommended-scss@15.0.1(postcss@8.5.3)(stylelint@16.19.1):
     dependencies:
       postcss-scss: 4.0.9(postcss@8.5.3)
       stylelint: 16.19.1
@@ -2904,10 +2904,10 @@ snapshots:
     dependencies:
       stylelint: 16.19.1
 
-  stylelint-config-standard-scss@15.0.0(postcss@8.5.3)(stylelint@16.19.1):
+  stylelint-config-standard-scss@15.0.1(postcss@8.5.3)(stylelint@16.19.1):
     dependencies:
       stylelint: 16.19.1
-      stylelint-config-recommended-scss: 15.0.0(postcss@8.5.3)(stylelint@16.19.1)
+      stylelint-config-recommended-scss: 15.0.1(postcss@8.5.3)(stylelint@16.19.1)
       stylelint-config-standard: 38.0.0(stylelint@16.19.1)
     optionalDependencies:
       postcss: 8.5.3

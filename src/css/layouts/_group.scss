@@ -9,7 +9,7 @@
 @use "../functions" as f;
 
 .group {
-  --gap: #{f.lines(0.5)} #{f.spacer(2)};
+  --gap: #{f.lines(half)} #{f.spacer(2)};
   --wrap: wrap;
 
   display: flex;

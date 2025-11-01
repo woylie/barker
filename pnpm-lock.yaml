@@ -12,10 +12,10 @@ importers:
         specifier: 7.0.2
         version: 7.0.2(postcss@8.5.4)
       autoprefixer:
-        specifier: ^10.4.21
+        specifier: 10.4.21
         version: 10.4.21(postcss@8.5.4)
       css-loader:
-        specifier: ^7.1.2
+        specifier: 7.1.2
         version: 7.1.2
       esbuild:
         specifier: ^0.25.5
@@ -30,10 +30,10 @@ importers:
         specifier: 4.0.9
         version: 4.0.9(postcss@8.5.4)
       prettier:
-        specifier: ^3.5.3
+        specifier: 3.5.3
         version: 3.5.3
       style-dictionary:
-        specifier: ^5.0.0
+        specifier: 5.0.0
         version: 5.0.0
       stylelint:
         specifier: ^16.20.0

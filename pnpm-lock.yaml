@@ -18,10 +18,10 @@ importers:
         specifier: 7.1.2
         version: 7.1.2
       esbuild:
-        specifier: ^0.25.5
+        specifier: 0.25.5
         version: 0.25.5
       esbuild-sass-plugin:
-        specifier: ^3.3.1
+        specifier: 3.3.1
         version: 3.3.1(esbuild@0.25.5)(sass-embedded@1.89.1)
       postcss:
         specifier: 8.5.4

@@ -36,16 +36,16 @@ importers:
         specifier: 5.0.0
         version: 5.0.0
       stylelint:
-        specifier: ^16.20.0
+        specifier: 16.20.0
         version: 16.20.0
       stylelint-config-recess-order:
-        specifier: ^6.0.0
+        specifier: 6.0.0
         version: 6.0.0(stylelint@16.20.0)
       stylelint-config-standard-scss:
-        specifier: ^15.0.1
+        specifier: 15.0.1
         version: 15.0.1(postcss@8.5.4)(stylelint@16.20.0)
       stylelint-declaration-strict-value:
-        specifier: ^1.10.11
+        specifier: 1.10.11
         version: 1.10.11(stylelint@16.20.0)
 
 packages:

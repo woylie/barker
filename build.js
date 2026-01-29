@@ -3,7 +3,7 @@ import * as esbuild from "esbuild";
 import postcss from "postcss";
 import autoprefixer from "autoprefixer";
 import { sassPlugin } from "esbuild-sass-plugin";
-import { purgeCSSPlugin } from "@fullhuman/postcss-purgecss";
+import purgeCSSPlugin from "@fullhuman/postcss-purgecss";
 
 const args = process.argv.slice(2);
 const watch = args.includes("--watch");

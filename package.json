@@ -20,17 +20,18 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "8.0.0",
-    "autoprefixer": "10.4.27",
+    "autoprefixer": "10.5.4",
     "css-loader": "7.1.4",
     "esbuild": "0.28.1",
     "esbuild-sass-plugin": "3.7.0",
-    "postcss": "8.5.11",
+    "postcss": "8.5.23",
     "postcss-scss": "4.0.9",
-    "prettier": "3.8.1",
-    "style-dictionary": "5.3.3",
-    "stylelint": "17.5.0",
+    "prettier": "3.9.6",
+    "style-dictionary": "5.5.0",
+    "stylelint": "17.14.1",
     "stylelint-config-recess-order": "7.7.0",
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-declaration-strict-value": "1.11.1"
-  }
+  },
+  "packageManager": "pnpm@11.17.0+sha512.cca3cea332ad254bb84145f966d19f4879615210346fc92c79a047f23a0d7b3cca3c3792f0076ba1f1831d277efbcf0a9119b31a9a60eca7fb3d6231f331ef72"
 }

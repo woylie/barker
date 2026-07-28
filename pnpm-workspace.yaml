@@ -1,0 +1,6 @@
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+minimumReleaseAgeExclude:
+  - immutable@5.1.8
+  - postcss@8.5.12 || 8.5.18

@@ -24,7 +24,7 @@
     "css-loader": "7.1.4",
     "esbuild": "0.28.1",
     "esbuild-sass-plugin": "3.7.0",
-    "postcss": "8.5.25",
+    "postcss": "8.5.26",
     "postcss-scss": "4.0.9",
     "prettier": "3.9.6",
     "style-dictionary": "5.5.0",
@@ -33,5 +33,5 @@
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-declaration-strict-value": "1.11.1"
   },
-  "packageManager": "pnpm@11.19.0+sha512.7881f3ed590d472c4a955e2b88b2121791116066dcc88cbca3849ec9b60f1bbaa6d2ccb221fa91da4e1c65bef2bcbe379365aea7ac539c7bf86dedc3a1b22dce"
+  "packageManager": "pnpm@11.20.0+sha512.9a6f330a95b66446ea088faf1521405a8a01f07fde7124cc9958dfed52d4bb436737e65b08f85f37b46fcba375092558ac51262b816844b22f63406ed166bfee"
 }

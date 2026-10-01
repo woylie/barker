@@ -15,8 +15,8 @@ importers:
         specifier: 10.5.4
         version: 10.5.4(postcss@8.5.26)
       css-loader:
-        specifier: 7.1.4
-        version: 7.1.4
+        specifier: 7.1.5
+        version: 7.1.5
       esbuild:
         specifier: 0.28.2
         version: 0.28.2
@@ -649,8 +649,8 @@ packages:
     resolution: {integrity: sha512-8HFEBPKhOpJPEPu70wJJetjKta86Gw9+CCyCnB3sui2qQfOvRyqBy4IKLKKAwdMpWb2lHXWk9Wb4Z6AmaUT1Pg==}
     engines: {node: '>=12'}
 
-  css-loader@7.1.4:
-    resolution: {integrity: sha512-vv3J9tlOl04WjiMvHQI/9tmIrCxVrj6PFbHemBB1iihpeRbi/I4h033eoFIhwxBBqLhI0KYFS7yvynBFhIZfTw==}
+  css-loader@7.1.5:
+    resolution: {integrity: sha512-Q7iAfQkU2twNBryKX/vGAlE+GAmkF7quhSzAGNK8fBimxk3+tqg245rH52UPb9dioBolBc8rP0ihmHBaDTJQBA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || ^1.0.0 || ^2.0.0-0
@@ -2081,7 +2081,7 @@ snapshots:
 
   css-functions-list@3.3.3: {}
 
-  css-loader@7.1.4:
+  css-loader@7.1.5:
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.26)
       postcss: 8.5.26
@@ -2536,13 +2536,13 @@ snapshots:
     dependencies:
       icss-utils: 5.1.0(postcss@8.5.26)
       postcss: 8.5.26
-      postcss-selector-parser: 7.1.1
+      postcss-selector-parser: 7.1.4
       postcss-value-parser: 4.2.0
 
   postcss-modules-scope@3.2.1(postcss@8.5.26):
     dependencies:
       postcss: 8.5.26
-      postcss-selector-parser: 7.1.1
+      postcss-selector-parser: 7.1.4
 
   postcss-modules-values@4.0.0(postcss@8.5.26):
     dependencies:
@@ -2875,7 +2875,7 @@ snapshots:
       mdn-data: 2.27.1
       postcss-media-query-parser: 0.2.3
       postcss-resolve-nested-selector: 0.1.6
-      postcss-selector-parser: 7.1.1
+      postcss-selector-parser: 7.1.4
       postcss-value-parser: 4.2.0
       stylelint: 17.14.1(supports-color@10.2.2)
 

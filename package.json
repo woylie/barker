@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "8.0.0",
-    "autoprefixer": "10.5.4",
+    "autoprefixer": "10.6.1",
     "css-loader": "7.1.4",
     "esbuild": "0.28.2",
     "esbuild-sass-plugin": "3.7.0",

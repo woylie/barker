@@ -26,7 +26,7 @@
     "esbuild-sass-plugin": "3.7.0",
     "postcss": "8.5.26",
     "postcss-scss": "4.0.9",
-    "prettier": "3.9.6",
+    "prettier": "3.9.9",
     "style-dictionary": "5.5.2",
     "stylelint": "17.14.1",
     "stylelint-config-recess-order": "7.8.0",

@@ -12,6 +12,7 @@
  */
 
 @use "functions" as f;
+@use "mixins" as m;
 
 /// Applies a vertical margin between the child elements.
 ///
@@ -51,4 +52,15 @@
         margin-top: var(--space, f.lines(one-and-a-half));
       }
   */
+}
+
+/// Hides an element visually and keeps it readable by assistive technology. A
+/// focusable element, such as a skip link, becomes visible on focus.
+///
+/// Inside a media query, use the `visually-hidden` mixin instead.
+///
+/// This can also be applied with the `.visually-hidden` class or the
+/// `data-visually-hidden` attribute (see utilities/visually-hidden).
+%visually-hidden {
+  @include m.visually-hidden;
 }

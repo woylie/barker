@@ -1,2 +1,26 @@
-@use "light";
-@use "dark";
+/**
+ * Each color token has a light and a dark value. The `color-scheme` of the
+ * element that uses the token selects the value. A page follows the operating
+ * system's color scheme unless `.theme-light` or `.theme-dark` overrides it.
+ */
+
+@use "../functions" as f;
+@use "../../../build/tokens/scss/mixin" as tm;
+
+:root {
+  @include tm.tokens;
+
+  color-scheme: light dark;
+}
+
+// The text color is set again, because a child inherits the resolved color of
+// its parent, not the `light-dark()` value.
+.theme-light {
+  color: f.color(text, default);
+  color-scheme: light;
+}
+
+.theme-dark {
+  color: f.color(text, default);
+  color-scheme: dark;
+}

@@ -19,7 +19,7 @@
   flex-wrap: wrap;
   gap: var(--gap);
 
-  > :first-child {
+  > :first-child:not(:last-child) {
     flex-grow: 1;
     flex-basis: var(--width-left, 50%);
   }

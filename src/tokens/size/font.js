@@ -33,7 +33,7 @@ const addBaseSize = (sizes, scale) => {
   return sizes;
 };
 
-let sizes = {};
+export let sizes = {};
 sizes = addSmallerSizes(sizes, modularScale, smallerSizes);
 sizes = addBaseSize(sizes, modularScale);
 sizes = addLargerSizes(sizes, modularScale, largerSizes);

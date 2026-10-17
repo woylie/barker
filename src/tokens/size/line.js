@@ -1,5 +1,5 @@
 // in rem
-const baseLineHeight = 1.5;
+export const baseLineHeight = 1.5;
 
 // multiples of the base line height
 const factorNames = {

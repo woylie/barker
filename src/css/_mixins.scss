@@ -11,3 +11,16 @@
  */
 
 @use "sass:map";
+@use "functions" as f;
+
+/// Sets the font size and the line height of the given size.
+///
+/// @arg {String} $size
+@mixin size($size) {
+  @if not map.has-key(f.token(size, font), $size) {
+    @error "Invalid size #{$size}. Allowed values: #{map.keys(f.token(size, font))}.";
+  }
+
+  font-size: var(#{"--size-font-" + $size});
+  line-height: var(#{"--size-line-height-" + $size});
+}

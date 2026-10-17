@@ -8,6 +8,7 @@
 @each $key, $value in f.token(size, font) {
   #{".size-" + $key} {
     font-size: var(#{"--size-font-" + $key}) !important;
+    line-height: var(#{"--size-line-height-" + $key}) !important;
   }
 }
 

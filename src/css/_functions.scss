@@ -24,10 +24,6 @@
 @use "sass:math";
 @use "sass:meta";
 
-@function base-size() {
-  @return 100%;
-}
-
 /// Returns the color with the given ID by referencing a custom property.
 ///
 /// @arg {String} $id
@@ -53,17 +49,6 @@
   }
 
   @return var(--font-family-#{"" + $id});
-}
-
-/// Returns the font size with the given ID by referencing a custom property.
-///
-/// @arg {String} $id
-@function size($id) {
-  @if not map.has-key(token(size, font), $id) {
-    @error "Invalid size #{$id}. Allowed values: #{map.keys(token(size, font))}.";
-  }
-
-  @return var(--size-font-#{"" + $id});
 }
 
 /// Returns the a vertical distance based on the given number of lines.

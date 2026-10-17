@@ -17,6 +17,8 @@
 ///
 /// @arg {String} $size
 @mixin size($size) {
+  $size: "#{$size}";
+
   @if not map.has-key(f.token(size, font), $size) {
     @error "Invalid size #{$size}. Allowed values: #{map.keys(f.token(size, font))}.";
   }

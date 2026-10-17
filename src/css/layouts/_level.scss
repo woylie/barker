@@ -2,6 +2,11 @@
  * Aligns two child elements side by side, if there is enough space. Remaining
  * space is evenly distributed among the children.
  *
+ *     <div class="level">
+ *       <div>left</div>
+ *       <div>right</div>
+ *     </div>
+ *
  * See also layouts/with-sidebar.
  */
 

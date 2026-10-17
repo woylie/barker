@@ -1,4 +1,5 @@
 @use "../functions" as f;
+@use "../mixins" as m;
 
 * {
   box-sizing: border-box;
@@ -6,11 +7,11 @@
 
 html,
 body {
+  @include m.size(m);
+
   padding: 0;
   margin: 0;
   font-family: f.font-family(main);
-  font-size: f.base-size();
-  line-height: f.lines(single);
   color: f.color(text, default);
   background: f.color(background, foundation);
 }

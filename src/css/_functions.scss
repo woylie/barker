@@ -23,7 +23,6 @@
 @use "sass:map";
 @use "sass:math";
 @use "sass:meta";
-@use "sass:string";
 
 @function base-size() {
   @return 100%;
@@ -70,17 +69,13 @@
 /// Returns the a vertical distance based on the given number of lines.
 /// References a custom property.
 ///
-/// @arg {Number} $factor
-@function lines($factor) {
-  $factor: to-string($factor);
-
-  @if not map.has-key(token(size, line), $factor) {
-    @error "Invalid line height #{$factor}. Allowed values: #{map.keys(token(size, line))}.";
+/// @arg {String} $id
+@function lines($id) {
+  @if not map.has-key(token(size, line), $id) {
+    @error "Invalid line height #{$id}. Allowed values: #{map.keys(token(size, line))}.";
   }
 
-  $key: decimal-to-string($factor);
-
-  @return var(--size-line-#{"" + $key});
+  @return var(--size-line-#{"" + $id});
 }
 
 /// Returns the letter spacing value with the given ID by referencing a custom
@@ -189,27 +184,6 @@
     @return $value;
   } @else {
     @return #{$value};
-  }
-}
-
-@function decimal-to-string($value) {
-  @return replace("#{$value}", ".", "-");
-}
-
-@function replace($string, $pattern, $replacement) {
-  $index: string.index($string, $pattern);
-
-  @if $index {
-    $beginning: string.slice($string, 1, $index - 1);
-    $end: replace(
-      string.slice($string, $index + string.length($pattern)),
-      $pattern,
-      $replacement
-    );
-
-    @return $beginning + $replacement + $end;
-  } @else {
-    @return $string;
   }
 }
 

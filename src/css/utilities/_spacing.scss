@@ -14,23 +14,22 @@
 $spacer: f.token(size, spacer);
 
 @each $key, $value in f.token(size, line) {
-  $key-string: f.decimal-to-string($key);
-  $line-value: var(#{"--size-line-" + $key-string});
+  $line-value: var(#{"--size-line-" + $key});
 
-  #{".pt-l-" + $key-string} {
+  #{".pt-l-" + $key} {
     padding-top: $line-value !important;
   }
 
-  #{".pb-l-" + $key-string} {
+  #{".pb-l-" + $key} {
     padding-bottom: $line-value !important;
   }
 
-  #{".py-l-" + $key-string} {
+  #{".py-l-" + $key} {
     padding-top: $line-value !important;
     padding-bottom: $line-value !important;
   }
 
-  #{".mb-l-" + $key-string} {
+  #{".mb-l-" + $key} {
     margin-bottom: $line-value !important;
   }
 }

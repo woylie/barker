@@ -5,9 +5,9 @@ const baseLineHeight = 1.5;
 const factorNames = {
   0.25: "quarter",
   0.5: "half",
-  0.75: "three_quarters",
+  0.75: "three-quarters",
   1: "single",
-  1.5: "one_and_a_half",
+  1.5: "one-and-a-half",
   2: "double",
 };
 

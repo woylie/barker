@@ -52,6 +52,7 @@ pnpm install
 | Fix Prettier issues                                 | `pnpm lint:prettier:fix`  |
 | Run Stylelint                                       | `pnpm lint:stylelint`     |
 | Fix Stylelint issues                                | `pnpm lint:stylelint:fix` |
+| Check the built CSS for undefined custom properties | `pnpm check:css`          |
 
 ## Folder Structure
 

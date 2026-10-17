@@ -28,5 +28,7 @@ jobs:
         run: pnpm lint
       - name: Development build
         run: pnpm build:dev
+      - name: Check CSS
+        run: pnpm check:css
       - name: Production build
         run: pnpm build:prod

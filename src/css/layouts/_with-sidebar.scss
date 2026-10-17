@@ -35,7 +35,7 @@
     > :last-child {
       flex-grow: 666;
       flex-basis: 0;
-      min-width: var(--content-min-width);
+      min-inline-size: var(--content-min-width);
     }
   }
 
@@ -48,7 +48,7 @@
     > :first-child {
       flex-grow: 666;
       flex-basis: 0;
-      min-width: var(--content-min-width);
+      min-inline-size: var(--content-min-width);
     }
   }
 

@@ -28,20 +28,20 @@
   justify-content: flex-start;
 
   & > * + * {
-    margin-top: var(--space, f.lines(single));
+    margin-block-start: var(--space, f.lines(single));
   }
 
   /*
   You can add modifiers like this:
 
       &.is-small > * + * {
-        margin-top: var(--space, f.lines(half));
+        margin-block-start: var(--space, f.lines(half));
       }
 
   Or you can add exceptions like this:
 
       & > .some-component + * {
-        margin-top: var(--space, f.lines(one-and-a-half));
+        margin-block-start: var(--space, f.lines(one-and-a-half));
       }
 
   This would apply a different margin between `.some-component` and the next
@@ -49,7 +49,7 @@
   component and the previous element:
 
       & > * + .some-component {
-        margin-top: var(--space, f.lines(one-and-a-half));
+        margin-block-start: var(--space, f.lines(one-and-a-half));
       }
   */
 }

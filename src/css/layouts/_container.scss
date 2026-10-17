@@ -7,11 +7,10 @@
 .container {
   --max-width: #{f.measure()};
 
-  max-width: var(--max-width);
+  max-inline-size: var(--max-width);
 
   &.is-centered {
-    margin-right: auto;
-    margin-left: auto;
+    margin-inline: auto;
   }
 
   &.has-centered-children {

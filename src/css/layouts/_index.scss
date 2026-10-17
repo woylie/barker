@@ -13,7 +13,7 @@
  *       --max-width: 40rem;
  *
  *       display: flex;
- *       max-width: var(--max-width);
+ *       max-inline-size: var(--max-width);
  *       gap: f.spacer(4);
  *
  *       &.is-narrow {

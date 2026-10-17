@@ -25,8 +25,7 @@ $spacer: f.token(size, spacer);
   }
 
   #{".py-l-" + $key} {
-    padding-top: $line-value !important;
-    padding-bottom: $line-value !important;
+    padding-block: $line-value !important;
   }
 
   #{".mb-l-" + $key} {
@@ -46,8 +45,7 @@ $spacer: f.token(size, spacer);
   }
 
   #{".px-s-" + $factor} {
-    padding-right: $spacer-value !important;
-    padding-left: $spacer-value !important;
+    padding-inline: $spacer-value !important;
   }
 
   #{".ml-s-" + $factor} {
@@ -59,7 +57,6 @@ $spacer: f.token(size, spacer);
   }
 
   #{".mx-s-" + $factor} {
-    margin-right: $spacer-value !important;
-    margin-left: $spacer-value !important;
+    margin-inline: $spacer-value !important;
   }
 }

@@ -1,5 +1,5 @@
-// Colors for the light theme. You can add more themes by adding files named
-// `theme.{name}.js`.
+// Colors for the light theme. The light and the dark theme define the same
+// tokens.
 
 export default {
   color: {

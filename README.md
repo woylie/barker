@@ -38,6 +38,22 @@ pnpm install
   can modify the output formats for the design tokens here. Note that the SCSS
   files depend on the `scss` output format.
 
+## Themes
+
+Each color token has a light and a dark value, which you define in
+`src/tokens/color/theme.light.js` and `src/tokens/color/theme.dark.js`. The
+build combines the two values with the CSS function `light-dark()`.
+
+By default, the system's color scheme is applied. To override the color scheme,
+for example based on user preference, add the `.theme-light` or `.theme-dark`
+class the `html` element.
+
+```html
+<html class="theme-dark">
+  ...
+</html>
+```
+
 ## Commands
 
 | Description                                         | Command                   |

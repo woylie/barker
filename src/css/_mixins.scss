@@ -26,3 +26,26 @@
   font-size: var(#{"--size-font-" + $size});
   line-height: var(#{"--size-line-height-" + $size});
 }
+
+/// Hides an element visually and keeps it readable by assistive technology. A
+/// focusable element, such as a skip link, becomes visible on focus.
+///
+/// Prefer `%visually-hidden` (see extends). This mixin exists because `@extend`
+/// does not work inside a media query.
+///
+/// @example
+///   .some-label {
+///     @media (width < 40rem) {
+///       @include m.visually-hidden;
+///     }
+///   }
+@mixin visually-hidden {
+  &:not(:focus, :active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+}

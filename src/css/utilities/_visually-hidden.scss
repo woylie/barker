@@ -1,0 +1,12 @@
+/**
+ * This module defines the `.visually-hidden` class and the
+ * `data-visually-hidden` attribute, which apply `%visually-hidden` (see
+ * extends).
+ */
+
+@use "../extends";
+
+.visually-hidden,
+[data-visually-hidden] {
+  @extend %visually-hidden;
+}

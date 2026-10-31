@@ -2,12 +2,3 @@ allowBuilds:
   "@parcel/watcher": true
   esbuild: true
 minimumReleaseAge: 10080
-auditConfig:
-  ignoreGhsas:
-    # braces: stack exhaustion on deeply nested patterns. Only the dev tooling
-    # uses it, on glob patterns from this repository. The fixed version the
-    # advisory names, 3.0.4, is not on npm, so no override can replace 3.0.3.
-    - GHSA-vfj7-8cjw-p6xm
-minimumReleaseAgeExclude:
-  - minimatch@11.0.1
-  - glob@14.0.2
